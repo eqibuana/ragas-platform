@@ -1,0 +1,18 @@
+services:
+  ragas-evaluation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      # AWS credentials for RAGAS judge LLM (Bedrock) + embeddings (SageMaker)
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=ap-southeast-3
+    volumes:
+      # Mount output directory to get results on host
+      - ./output:/app/output
+      # Mount golden dataset (if updated locally)
+      - ./ragas_data.xlsx:/app/ragas_data.xlsx:ro
+    command:
+      - "--output"
+      - "/app/output/ragas_results.xlsx"

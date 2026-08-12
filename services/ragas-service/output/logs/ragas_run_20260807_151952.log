@@ -1,0 +1,886 @@
+[log] Full run log being written to: D:\eqibuana\machine_learning\permata_bank\ai-platform\services\ragas-service\output\logs\ragas_run_20260807_151952.log
+============================================================
+PermataBank AI Platform - RAGAS Evaluation
+API: http://k8s-aiplatfo-frontend-1732695a13-fe3650871f8fb59b.elb.ap-southeast-3.amazonaws.com
+Dataset: D:\eqibuana\machine_learning\permata_bank\ai-platform\services\ragas-service\ragas_data.xlsx
+============================================================
+
+1. Loading golden dataset: D:\eqibuana\machine_learning\permata_bank\ai-platform\services\ragas-service\ragas_data.xlsx
+   Sheets found: ['HR', 'Contact Center']
+   Will evaluate: {'HR': 'hr', 'Contact Center': 'contact_center'}
+
+  Logging in as hr_mgr_1@example.com (hr_manager) for hr...
+  Logged in: hr_mgr_1@example.com (roles: ['hr_manager'])
+
+============================================================
+  Sheet: 'HR' → Domain: hr (People Care Agent)
+  Questions: 3
+============================================================
+  [1/3]  Berapa jam maksimal kerja lembur per hari?... OK (9.1s) [✓ 2 chunks (metadata)]
+  [2/3]  Berapa jam maksimal kerja lembur per minggu?... OK (6.8s) [✓ 2 chunks (metadata)]
+  [3/3]  Apa ketentuan pembayaran upah lembur?... OK (11.5s) [✓ 3 chunks (metadata)]
+
+  Logging in as hr_usr_1@example.com (hr_user) for hr...
+  Logged in: hr_usr_1@example.com (roles: ['hr_user'])
+
+============================================================
+  Sheet: 'HR' → Domain: hr (People Care Agent)
+  Questions: 3
+============================================================
+  [1/3]  Berapa jam maksimal kerja lembur per hari?... OK (6.5s) [✓ 2 chunks (metadata)]
+  [2/3]  Berapa jam maksimal kerja lembur per minggu?... OK (8.3s) [✓ 2 chunks (metadata)]
+  [3/3]  Apa ketentuan pembayaran upah lembur?... OK (7.5s) [✓ 7 chunks (metadata)]
+
+  Logging in as hr_usr_2@example.com (hr_user) for hr...
+  Logged in: hr_usr_2@example.com (roles: ['hr_user'])
+
+============================================================
+  Sheet: 'HR' → Domain: hr (People Care Agent)
+  Questions: 3
+============================================================
+  [1/3]  Berapa jam maksimal kerja lembur per hari?... OK (8.6s) [✓ 2 chunks (metadata)]
+  [2/3]  Berapa jam maksimal kerja lembur per minggu?... OK (6.7s) [✓ 2 chunks (metadata)]
+  [3/3]  Apa ketentuan pembayaran upah lembur?... OK (19.3s) [✓ 4 chunks (metadata)]
+
+  Logging in as hr_usr_3@example.com (hr_user) for hr...
+  Logged in: hr_usr_3@example.com (roles: ['hr_user'])
+
+============================================================
+  Sheet: 'HR' → Domain: hr (People Care Agent)
+  Questions: 3
+============================================================
+  [1/3]  Berapa jam maksimal kerja lembur per hari?... OK (6.1s) [✓ 2 chunks (metadata)]
+  [2/3]  Berapa jam maksimal kerja lembur per minggu?... OK (7.3s) [✓ 2 chunks (metadata)]
+  [3/3]  Apa ketentuan pembayaran upah lembur?... OK (7.7s) [✓ 4 chunks (metadata)]
+
+  Logging in as cc_mgr_1@example.com (cc_manager) for contact_center...
+  Logged in: cc_mgr_1@example.com (roles: ['cc_manager'])
+
+============================================================
+  Sheet: 'Contact Center' → Domain: contact_center (Contact Center Agent)
+  Questions: 4
+============================================================
+  [1/4] Kapan masa penawaran SR021?... OK (18.0s) [✓ 1 chunks (metadata)]
+  [2/4] Kapan Periode Early Bird SR021?... 
+     [retry 1/3] , waiting 3s...
+
+     [retry 2/3] [Errno 11001] getaddrinfo failed, waiting 6s...
+FAILED ([Errno 11001] getaddrinfo failed)
+  [3/4] Sebutkan minimun holding period SR021?... 
+     [retry 1/3] [Errno 11001] getaddrinfo failed, waiting 3s...
+
+     [retry 2/3] [Errno 11001] getaddrinfo failed, waiting 6s...
+FAILED ([Errno 11001] getaddrinfo failed)
+  [4/4] Bagaimana proses pemesanan SR021?... 
+     [retry 1/3] [Errno 11001] getaddrinfo failed, waiting 3s...
+
+     [retry 2/3] [Errno 11001] getaddrinfo failed, waiting 6s...
+FAILED ([Errno 11001] getaddrinfo failed)
+
+  Logging in as cc_usr_1@example.com (cc_user) for contact_center...
+
+     [retry 1/3] [Errno 11001] getaddrinfo failed, waiting 3s...
+
+     [retry 2/3] [Errno 11001] getaddrinfo failed, waiting 6s...
+   ERROR: Login failed for cc_usr_1@example.com: [Errno 11001] getaddrinfo failed
+
+  Logging in as cc_usr_2@example.com (cc_user) for contact_center...
+
+     [retry 1/3] [Errno 11001] getaddrinfo failed, waiting 3s...
+
+     [retry 2/3] [Errno 11001] getaddrinfo failed, waiting 6s...
+   ERROR: Login failed for cc_usr_2@example.com: [Errno 11001] getaddrinfo failed
+
+  Logging in as cc_usr_3@example.com (cc_user) for contact_center...
+
+     [retry 1/3] [Errno 11001] getaddrinfo failed, waiting 3s...
+
+     [retry 2/3] [Errno 11001] getaddrinfo failed, waiting 6s...
+   ERROR: Login failed for cc_usr_3@example.com: [Errno 11001] getaddrinfo failed
+
+3. Total questions evaluated: 16
+
+4. Running RAGAS evaluation...
+   WARNING: 3 questions failed with API errors.
+   RAGAS will only evaluate 13 successful answers.
+  LLM judge: Bedrock Nova Pro (temperature=0) ✓ [wrapped for ragas 0.2.x]
+  Testing SageMaker bge-m3 embeddings... 
+  [!] Embeddings failed: Could not connect to the endpoint URL: "https://runtime.sagemaker.ap-southeast-3.amazonaws.com/endpoints/bge-m3-embedding/invocations"
+  → answer_relevancy & answer_correctness will be skipped
+
+  ── Question ↔ Ground Truth Verification ──
+    [1] ✓ Q:  Berapa jam maksimal kerja lembur per hari?
+         GT: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+    [2] ✓ Q:  Berapa jam maksimal kerja lembur per minggu?
+         GT: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+    [3] ✓ Q:  Apa ketentuan pembayaran upah lembur?
+         GT: Upah lembur harus lebih tinggi dari upah biasa, ketentuan ru...
+    [4] ✓ Q:  Berapa jam maksimal kerja lembur per hari?
+         GT: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+    [5] ✓ Q:  Berapa jam maksimal kerja lembur per minggu?
+         GT: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+    [6] ✓ Q:  Apa ketentuan pembayaran upah lembur?
+         GT: Upah lembur harus lebih tinggi dari upah biasa, ketentuan ru...
+    [7] ✓ Q:  Berapa jam maksimal kerja lembur per hari?
+         GT: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+    [8] ✓ Q:  Berapa jam maksimal kerja lembur per minggu?
+         GT: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+    [9] ✓ Q:  Apa ketentuan pembayaran upah lembur?
+         GT: Upah lembur harus lebih tinggi dari upah biasa, ketentuan ru...
+    [10] ✓ Q:  Berapa jam maksimal kerja lembur per hari?
+         GT: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+    [11] ✓ Q:  Berapa jam maksimal kerja lembur per minggu?
+         GT: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+    [12] ✓ Q:  Apa ketentuan pembayaran upah lembur?
+         GT: Upah lembur harus lebih tinggi dari upah biasa, ketentuan ru...
+    [13] ✓ Q: Kapan masa penawaran SR021?
+         GT: Masa Penawaran 23 Agustus – 18 September 2024
+  ── Total: 13 questions, 13 with ground truth ──
+
+
+  Metrics to compute: ['faithfulness', 'answer_relevancy', 'context_precision', 'context_recall', 'answer_correctness', 'noise_sensitivity'] + summarization_score
+  Questions to evaluate: 13
+  Running... (each metric is scored independently, this takes several minutes)
+
+  [faithfulness] running... OK (avg=nan)
+
+  ┌── [faithfulness] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 2: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 3: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 4: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 5: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 6: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 7: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 8: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 9: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 10: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 11: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 12: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 13: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question: Kapan masa penawaran SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (1):
+  │     1. [Claim extraction failed: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/m
+  │   [Verifying claims against contexts...]
+  │     ✗ [ERROR] [Claim extraction failed: Could not connect to the endpoint URL: "https://bedroc
+  │       Reason: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/amazon.nova-pro-v1%3A
+  │   Calculation: Faithfulness = 0/1 supported claims = 0.0000
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   RAGAS Score: N/A
+  └── End [faithfulness] ──
+
+  [answer_relevancy] running... FAILED (Missing credentials. Please pass an `api_key`, `workload_identity`, `admin_api_key`, or set the `OPENAI_API_KEY` or `OPENAI_ADMIN_KEY` environment variable.)
+  [context_precision] running... OK (avg=nan)
+
+  ┌── [context_precision] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 1 UU No. 13 Tahun 2003 tentang Ketenag
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] ERROR: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/a
+  │     ✗ [Rank 2] ERROR: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/a
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 2: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 1 UU No. 13 Tahun 2003 tentang Ketenag
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] ERROR: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/a
+  │     ✗ [Rank 2] ERROR: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/a
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 3: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 3 PP No. 36 Tahun 2021 tentang Pengupa
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │     [3] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] ERROR: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/a
+  │     ✗ [Rank 2] ERROR: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/a
+  │     ✗ [Rank 3] ERROR: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/a
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 4: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 1 UU No. 13 Tahun 2003 tentang Ketenag
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] ERROR: Could not connect to the endpoint URL: "https://bedrock-runtime.ap-southeast-3.amazonaws.com/model/a
+  │     ✓ [Rank 2] YES: The context chunk refers to a regulation (PP No. 35 Tahun 2021) that deals with working hours and re
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 5: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 1 UU No. 13 Tahun 2003 tentang Ketenag
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✓ [Rank 1] YES: The context chunk refers to Law No. 13 of 2003 on Manpower, specifically mentioning Section on Prote
+  │     ✓ [Rank 2] YES: The context chunk refers to a document that discusses working hours and rest periods, which is direc
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 6: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │     [3] [retrieval-service via agentic-chatbot-service citation] Doc: 3 PP No. 36 Tahun 2021 tentang Pengupa
+  │     [4] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │     [5] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✓ [Rank 1] YES: The context chunk refers to a regulation (PP No. 35 Tahun 2021) that deals with working hours and re
+  │     ✓ [Rank 2] YES: The context chunk refers to a document that discusses regulations related to working hours and rest 
+  │     ✓ [Rank 3] YES: The context chunk refers to a document titled "PP No. 36 Tahun 2021 tentang Pengupahan" which transl
+  │     ✓ [Rank 4] YES: The context chunk specifically mentions "Pasal 21 ayat (2) wajib membayar Upah Kerja Lembur," which 
+  │     ✓ [Rank 5] YES: The context chunk refers to a regulation (PP No. 35 Tahun 2021) that covers working hours and rest t
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 7: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 1 UU No. 13 Tahun 2003 tentang Ketenag
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✓ [Rank 1] YES: The context chunk refers to Law No. 13 of 2003 on Manpower, specifically mentioning a section relate
+  │     ✓ [Rank 2] YES: The context chunk refers to a regulation (PP No. 35 Tahun 2021) that deals with working hours and re
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 8: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 1 UU No. 13 Tahun 2003 tentang Ketenag
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✓ [Rank 1] YES: The context chunk refers to Law No. 13 of 2003 on Manpower, specifically mentioning a section relate
+  │     ✓ [Rank 2] YES: The context refers to a regulation (PP No. 35 Tahun 2021) that deals with working hours and rest tim
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 9: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 3 PP No. 36 Tahun 2021 tentang Pengupa
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │     [3] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │     [4] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✓ [Rank 1] YES: The context chunk refers to a document titled "PP No. 36 Tahun 2021 tentang Pengupahan" which transl
+  │     ✓ [Rank 2] YES: The context chunk refers to a specific regulation (PP No. 35 Tahun 2021) that discusses overtime pay
+  │     ✓ [Rank 3] YES: The context chunk refers to a regulation (PP No. 35 Tahun 2021) that covers working hours and rest p
+  │     ✓ [Rank 4] YES: The context chunk specifically mentions "Pasal 21 ayat (2) wajib membayar Upah Kerja Lembur," which 
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 10: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 1 UU No. 13 Tahun 2003 tentang Ketenag
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✓ [Rank 1] YES: The context chunk refers to Law No. 13 of 2003 on Manpower, specifically mentioning Section on Prote
+  │     ✓ [Rank 2] YES: The context chunk refers to a regulation (PP No. 35 Tahun 2021) that deals with working hours and re
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 11: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 1 UU No. 13 Tahun 2003 tentang Ketenag
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✓ [Rank 1] YES: The context chunk refers to Law No. 13 of 2003 on Manpower, specifically mentioning a section relate
+  │     ✓ [Rank 2] YES: The context chunk refers to a regulation (PP No. 35 Tahun 2021) that deals with working hours and re
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 12: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │     [2] [retrieval-service via agentic-chatbot-service citation] Doc: 3 PP No. 36 Tahun 2021 tentang Pengupa
+  │     [3] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │     [4] [retrieval-service via agentic-chatbot-service citation] Doc: 2 PP No. 35 Tahun 2021 tentang PKWT, A
+  │   [Checking each context's relevance to question...]
+  │     ✓ [Rank 1] YES: The context chunk refers to a regulation (PP No. 35 Tahun 2021) that covers working hours and rest p
+  │     ✓ [Rank 2] YES: The context chunk refers to a document titled "PP No. 36 Tahun 2021 tentang Pengupahan" which transl
+  │     ✓ [Rank 3] YES: The context chunk refers to a specific regulation (PP No. 35 Tahun 2021) that discusses overtime pay
+  │     ✓ [Rank 4] YES: The context chunk specifically mentions "Pasal 21 ayat (2) wajib membayar Upah Kerja Lembur," which 
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  │
+  │ Row 13: [⚠ N/A] Score=N/A
+  │   Assessment: ⚠ N/A — Score could not be computed
+  │   Question: Kapan masa penawaran SR021?
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   Contexts (ranked):
+  │     [1] [retrieval-service via agentic-chatbot-service citation] Doc: Product Guide SR021 High Level 2 3 | S
+  │   [Checking each context's relevance to question...]
+  │     ✓ [Rank 1] YES: The context chunk specifically mentions "Section: 3. Masa Penawaran" which directly corresponds to t
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: N/A
+  └── End [context_precision] ──
+
+  [context_recall] running... OK (avg=0.6538)
+
+  ┌── [context_recall] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [✓ PASS] Score=1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Maksimal 3 jam per hari
+  │       Reason: This statement can be attributed to the context provided by UU No. 13 Tahun 2003 tentang Ketenagakerjaan, specifically P
+  │   Calculation: Context Recall = 1/1 GT statements attributed = 1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   RAGAS Score: 1.0000
+  │
+  │ Row 2: [✓ PASS] Score=1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Maksimal 14 jam per minggu
+  │       Reason: This statement is directly supported by UU No. 13 Tahun 2003 tentang Ketenagakerjaan, Pasal 78 ayat 1b, which specifies 
+  │   Calculation: Context Recall = 1/1 GT statements attributed = 1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   RAGAS Score: 1.0000
+  │
+  │ Row 3: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Upah lembur harus lebih tinggi dari upah biasa
+  │       Reason: This is supported by PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK, Pasal 21 ayat (2) which states 
+  │     ✓ [YES] Ketentuan rumus teknis diatur di Keputusan Menteri
+  │       Reason: This is supported by UU 13/2003 Pasal 78 ayat 3, which indicates that the technical formula is regulated by a Ministeria
+  │   Calculation: Context Recall = 2/2 GT statements attributed = 1.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 4: [✓ PASS] Score=1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Maksimal 3 jam per hari
+  │       Reason: This statement is directly supported by UU 13/2003 Pasal 78 ayat 1b, as indicated in the provided context.
+  │     ✓ [YES] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: The context document explicitly cites UU No. 13 Tahun 2003 tentang Ketenagakerjaan, Section: PERLINDUNGAN, PENGUPAHAN, D
+  │   Calculation: Context Recall = 2/2 GT statements attributed = 1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   RAGAS Score: 1.0000
+  │
+  │ Row 5: [✓ PASS] Score=1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Maksimal 14 jam per minggu
+  │       Reason: This statement is directly supported by UU No. 13 Tahun 2003 tentang Ketenagakerjaan, Pasal 78 ayat 1b, which specifies 
+  │     ✓ [YES] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: The context provided explicitly cites UU No. 13 Tahun 2003, Pasal 78, which is the legal basis for the statement.
+  │   Calculation: Context Recall = 2/2 GT statements attributed = 1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   RAGAS Score: 1.0000
+  │
+  │ Row 6: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Upah lembur harus lebih tinggi dari upah biasa
+  │       Reason: This is a general requirement that can be found in labor regulations, and it is supported by the context of PP No. 35 Ta
+  │     ✓ [YES] Ketentuan rumus teknis diatur di Keputusan Menteri
+  │       Reason: The technical formula for calculating overtime pay is typically detailed in ministerial decisions, which aligns with the
+  │     ✗ [NO] (UU 13/2003 Pasal 78 ayat 3)
+  │       Reason: The specific legal reference to UU 13/2003 is not directly supported by the provided contexts, which are from different 
+  │   Calculation: Context Recall = 2/3 GT statements attributed = 0.6667
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 7: [✓ PASS] Score=1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Maksimal 3 jam per hari
+  │       Reason: This statement can be attributed to the context provided by UU No. 13 Tahun 2003 tentang Ketenagakerjaan, specifically P
+  │     ✓ [YES] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: This is directly cited in the context provided by the retrieval-service, confirming the source of the statement.
+  │   Calculation: Context Recall = 2/2 GT statements attributed = 1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   RAGAS Score: 1.0000
+  │
+  │ Row 8: [✓ PASS] Score=1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Maksimal 14 jam per minggu
+  │       Reason: This statement is directly supported by UU No. 13 Tahun 2003 tentang Ketenagakerjaan, Pasal 78 ayat 1b, which specifies 
+  │     ✓ [YES] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: The context provided explicitly cites UU No. 13 Tahun 2003, Pasal 78, which is the legal basis for the statement.
+  │   Calculation: Context Recall = 2/2 GT statements attributed = 1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   RAGAS Score: 1.0000
+  │
+  │ Row 9: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Upah lembur harus lebih tinggi dari upah biasa
+  │       Reason: This is supported by PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK, specifically Pasal 21 ayat (2) 
+  │     ✓ [YES] Ketentuan rumus teknis diatur di Keputusan Menteri
+  │       Reason: This is supported by UU 13/2003 Pasal 78 ayat 3, which indicates that the technical formula for overtime pay is regulate
+  │   Calculation: Context Recall = 2/2 GT statements attributed = 1.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 10: [✓ PASS] Score=1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Maksimal 3 jam per hari
+  │       Reason: This statement can be attributed to the context provided by UU No. 13 Tahun 2003 tentang Ketenagakerjaan, specifically P
+  │     ✓ [YES] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: This is a direct citation from the provided context, indicating the specific law and article where the statement origina
+  │   Calculation: Context Recall = 2/2 GT statements attributed = 1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   RAGAS Score: 1.0000
+  │
+  │ Row 11: [✓ PASS] Score=1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Maksimal 14 jam per minggu
+  │       Reason: This statement is directly supported by UU No. 13 Tahun 2003 tentang Ketenagakerjaan, Pasal 78 ayat 1b, which specifies 
+  │     ✓ [YES] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: The context provided explicitly cites UU No. 13 Tahun 2003, Pasal 78, which is the legal basis for the statement about m
+  │   Calculation: Context Recall = 2/2 GT statements attributed = 1.0000
+  │   Assessment: ✓ PASS (1.0000) — All needed information was retrieved from knowledge base
+  │   RAGAS Score: 1.0000
+  │
+  │ Row 12: [~ PARTIAL] Score=0.5000
+  │   Assessment: ~ PARTIAL (0.5000) — Some information missing from retrieval. Upload more documents or improve chunking
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Upah lembur harus lebih tinggi dari upah biasa
+  │       Reason: This is a general requirement that can be inferred from the context of regulations about wages and overtime, as seen in 
+  │     ✓ [YES] Ketentuan rumus teknis diatur di Keputusan Menteri
+  │       Reason: The regulation of technical formulas by ministerial decisions is a common practice, and the context documents discuss va
+  │     ✗ [NO] (UU 13/2003 Pasal 78 ayat 3)
+  │       Reason: The specific citation to UU 13/2003 Pasal 78 ayat 3 is not directly supported by the provided contexts, which reference 
+  │   Calculation: Context Recall = 2/3 GT statements attributed = 0.6667
+  │   Assessment: ~ PARTIAL (0.5000) — Some information missing from retrieval. Upload more documents or improve chunking
+  │   RAGAS Score: 0.5000
+  │
+  │ Row 13: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Kapan masa penawaran SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✓ [YES] Masa Penawaran 23 Agustus – 18 September 2024
+  │       Reason: The context document explicitly mentions "Masa Penawaran" in Section 3, which aligns with the ground truth statement.
+  │   Calculation: Context Recall = 1/1 GT statements attributed = 1.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Summary: 8 PASS, 1 PARTIAL, 4 FAIL (avg=0.6538)
+  └── End [context_recall] ──
+
+  [answer_correctness] running... FAILED (Missing credentials. Please pass an `api_key`, `workload_identity`, `admin_api_key`, or set the `OPENAI_API_KEY` or `OPENAI_ADMIN_KEY` environment variable.)
+  [noise_sensitivity] running... OK (avg=0.0000)
+
+  ┌── [noise_sensitivity] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat dilakukan paling banyak **3 (tiga) jam dalam 1 (satu) hari** [1]. N
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 2: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari dan 14 (empat belas) jam dal
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 3: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Ketentuan pembayaran upah lembur adalah sebagai berikut:
+
+- **Ketentuan umum pembayaran upah lembur**:
+  - Pengusaha wajib membayar upah lembur kepada
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 4: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari** [1]. Namun, PP No. 35 Tahu
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 5: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari dan 14 (empat belas) jam dal
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 6: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pasal 27** menyatakan bahwa pengusaha yang mempekerjakan pe
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 7: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat dilakukan paling banyak **3 (tiga) jam dalam 1 (satu) hari** [1]. N
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 8: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berdasarkan ketentuan dalam UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari dan 14 (empa
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 9: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu k
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 10: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: - Menurut **UU No. 13 Tahun 2003 tentang Ketenagakerjaan**, kerja lembur maksimal adalah **3 (tiga) jam** dalam 1 (satu) hari [1].
+- Namun, **PP No. 3
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 11: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berdasarkan ketentuan dalam UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal dapat dilakukan selama **14 jam dalam 1 minggu** [1]. 
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 12: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang disediakan:
+
+- **Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu 
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 13: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Kapan masa penawaran SR021?
+  │   Answer: Masa penawaran SR021 adalah dari **23 Agustus 2024** hingga **18 September 2024** [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   RAGAS Score: 0.0000
+  │
+  │ Summary: 0 PASS, 0 PARTIAL, 13 FAIL (avg=0.0000)
+  └── End [noise_sensitivity] ──
+
+  [summarization_score] running... OK (avg=0.2213)
+
+  ┌── [summarization_score] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [✗ FAIL] Score=0.3377
+  │   Assessment: ✗ FAIL (0.3377) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat dilakukan paling banyak **3 (tiga) jam dalam 1 (satu) hari** [1]. N
+  │   RAGAS Score: 0.3377
+  │
+  │ Row 2: [✗ FAIL] Score=0.2498
+  │   Assessment: ✗ FAIL (0.2498) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari dan 14 (empat belas) jam dal
+  │   RAGAS Score: 0.2498
+  │
+  │ Row 3: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Ketentuan pembayaran upah lembur adalah sebagai berikut:
+
+- **Ketentuan umum pembayaran upah lembur**:
+  - Pengusaha wajib membayar upah lembur kepada
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 4: [✗ FAIL] Score=0.3931
+  │   Assessment: ✗ FAIL (0.3931) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari** [1]. Namun, PP No. 35 Tahu
+  │   RAGAS Score: 0.3931
+  │
+  │ Row 5: [✗ FAIL] Score=0.2339
+  │   Assessment: ✗ FAIL (0.2339) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari dan 14 (empat belas) jam dal
+  │   RAGAS Score: 0.2339
+  │
+  │ Row 6: [✗ FAIL] Score=0.2267
+  │   Assessment: ✗ FAIL (0.2267) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pasal 27** menyatakan bahwa pengusaha yang mempekerjakan pe
+  │   RAGAS Score: 0.2267
+  │
+  │ Row 7: [✗ FAIL] Score=0.2748
+  │   Assessment: ✗ FAIL (0.2748) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat dilakukan paling banyak **3 (tiga) jam dalam 1 (satu) hari** [1]. N
+  │   RAGAS Score: 0.2748
+  │
+  │ Row 8: [✗ FAIL] Score=0.1667
+  │   Assessment: ✗ FAIL (0.1667) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan ketentuan dalam UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari dan 14 (empa
+  │   RAGAS Score: 0.1667
+  │
+  │ Row 9: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu k
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 10: [✗ FAIL] Score=0.3170
+  │   Assessment: ✗ FAIL (0.3170) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: - Menurut **UU No. 13 Tahun 2003 tentang Ketenagakerjaan**, kerja lembur maksimal adalah **3 (tiga) jam** dalam 1 (satu) hari [1].
+- Namun, **PP No. 3
+  │   RAGAS Score: 0.3170
+  │
+  │ Row 11: [✗ FAIL] Score=0.2917
+  │   Assessment: ✗ FAIL (0.2917) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan ketentuan dalam UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal dapat dilakukan selama **14 jam dalam 1 minggu** [1]. 
+  │   RAGAS Score: 0.2917
+  │
+  │ Row 12: [✗ FAIL] Score=0.0455
+  │   Assessment: ✗ FAIL (0.0455) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang disediakan:
+
+- **Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu 
+  │   RAGAS Score: 0.0455
+  │
+  │ Row 13: [✗ FAIL] Score=0.3397
+  │   Assessment: ✗ FAIL (0.3397) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Masa penawaran SR021 adalah dari **23 Agustus 2024** hingga **18 September 2024** [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   RAGAS Score: 0.3397
+  │
+  │ Summary: 0 PASS, 0 PARTIAL, 13 FAIL (avg=0.2213)
+  └── End [summarization_score] ──
+
+
+  ┌─────────────────────────────┬────────┐
+  │ Metric                      │ Score  │
+  ├─────────────────────────────┼────────┤
+  │ faithfulness                │  N/A   │
+  │ context_precision           │  N/A   │
+  │ context_recall              │ 0.6538 │ ██████░░░░
+  │ noise_sensitivity           │ 0.0000 │ ░░░░░░░░░░
+  │ summarization_score         │ 0.2213 │ ██░░░░░░░░
+  └─────────────────────────────┴────────┘

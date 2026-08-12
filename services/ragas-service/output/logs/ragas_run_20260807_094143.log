@@ -1,0 +1,2963 @@
+[log] Full run log being written to: D:\eqibuana\machine_learning\permata_bank\ai-platform\scripts\output\logs\ragas_run_20260807_094143.log
+============================================================
+PermataBank AI Platform - RAGAS Evaluation
+API: http://k8s-aiplatfo-frontend-1732695a13-fe3650871f8fb59b.elb.ap-southeast-3.amazonaws.com
+Dataset: ragas_data.xlsx
+============================================================
+
+1. Loading golden dataset: ragas_data.xlsx
+   Sheets found: ['HR', 'Contact Center']
+   Will evaluate: {'HR': 'hr', 'Contact Center': 'contact_center'}
+
+  Logging in as hr_mgr_1@example.com (hr_manager) for hr...
+  Logged in: hr_mgr_1@example.com (roles: ['hr_manager'])
+
+============================================================
+  Sheet: 'HR' → Domain: hr (People Care Agent)
+  Questions: 3
+============================================================
+  [1/3]  Berapa jam maksimal kerja lembur per hari?... OK (9.2s) [⚠ no chunks]
+  [2/3]  Berapa jam maksimal kerja lembur per minggu?... OK (8.6s) [⚠ no chunks]
+  [3/3]  Apa ketentuan pembayaran upah lembur?... OK (7.6s) [⚠ no chunks]
+
+  Logging in as hr_usr_1@example.com (hr_user) for hr...
+  Logged in: hr_usr_1@example.com (roles: ['hr_user'])
+
+============================================================
+  Sheet: 'HR' → Domain: hr (People Care Agent)
+  Questions: 3
+============================================================
+  [1/3]  Berapa jam maksimal kerja lembur per hari?... OK (6.0s) [⚠ no chunks]
+  [2/3]  Berapa jam maksimal kerja lembur per minggu?... OK (6.3s) [⚠ no chunks]
+  [3/3]  Apa ketentuan pembayaran upah lembur?... OK (9.3s) [⚠ no chunks]
+
+  Logging in as hr_usr_2@example.com (hr_user) for hr...
+  Logged in: hr_usr_2@example.com (roles: ['hr_user'])
+
+============================================================
+  Sheet: 'HR' → Domain: hr (People Care Agent)
+  Questions: 3
+============================================================
+  [1/3]  Berapa jam maksimal kerja lembur per hari?... OK (6.4s) [⚠ no chunks]
+  [2/3]  Berapa jam maksimal kerja lembur per minggu?... OK (6.7s) [⚠ no chunks]
+  [3/3]  Apa ketentuan pembayaran upah lembur?... OK (6.9s) [⚠ no chunks]
+
+  Logging in as hr_usr_3@example.com (hr_user) for hr...
+  Logged in: hr_usr_3@example.com (roles: ['hr_user'])
+
+============================================================
+  Sheet: 'HR' → Domain: hr (People Care Agent)
+  Questions: 3
+============================================================
+  [1/3]  Berapa jam maksimal kerja lembur per hari?... OK (5.7s) [⚠ no chunks]
+  [2/3]  Berapa jam maksimal kerja lembur per minggu?... OK (6.2s) [⚠ no chunks]
+  [3/3]  Apa ketentuan pembayaran upah lembur?... OK (7.1s) [⚠ no chunks]
+
+  Logging in as cc_mgr_1@example.com (cc_manager) for contact_center...
+  Logged in: cc_mgr_1@example.com (roles: ['cc_manager'])
+
+============================================================
+  Sheet: 'Contact Center' → Domain: contact_center (Contact Center Agent)
+  Questions: 4
+============================================================
+  [1/4] Kapan masa penawaran SR021?... OK (9.8s) [⚠ no chunks]
+  [2/4] Kapan Periode Early Bird SR021?... OK (8.9s) [⚠ no chunks]
+  [3/4] Sebutkan minimun holding period SR021?... OK (7.7s) [⚠ no chunks]
+  [4/4] Bagaimana proses pemesanan SR021?... OK (19.2s) [⚠ no chunks]
+
+  Logging in as cc_usr_1@example.com (cc_user) for contact_center...
+  Logged in: cc_usr_1@example.com (roles: ['cc_user'])
+
+============================================================
+  Sheet: 'Contact Center' → Domain: contact_center (Contact Center Agent)
+  Questions: 4
+============================================================
+  [1/4] Kapan masa penawaran SR021?... OK (12.7s) [⚠ no chunks]
+  [2/4] Kapan Periode Early Bird SR021?... OK (9.0s) [⚠ no chunks]
+  [3/4] Sebutkan minimun holding period SR021?... OK (7.5s) [⚠ no chunks]
+  [4/4] Bagaimana proses pemesanan SR021?... OK (20.3s) [⚠ no chunks]
+
+  Logging in as cc_usr_2@example.com (cc_user) for contact_center...
+  Logged in: cc_usr_2@example.com (roles: ['cc_user'])
+
+============================================================
+  Sheet: 'Contact Center' → Domain: contact_center (Contact Center Agent)
+  Questions: 4
+============================================================
+  [1/4] Kapan masa penawaran SR021?... OK (24.3s) [⚠ no chunks]
+  [2/4] Kapan Periode Early Bird SR021?... OK (14.0s) [⚠ no chunks]
+  [3/4] Sebutkan minimun holding period SR021?... OK (7.6s) [⚠ no chunks]
+  [4/4] Bagaimana proses pemesanan SR021?... OK (23.6s) [⚠ no chunks]
+
+  Logging in as cc_usr_3@example.com (cc_user) for contact_center...
+  Logged in: cc_usr_3@example.com (roles: ['cc_user'])
+
+============================================================
+  Sheet: 'Contact Center' → Domain: contact_center (Contact Center Agent)
+  Questions: 4
+============================================================
+  [1/4] Kapan masa penawaran SR021?... OK (28.7s) [⚠ no chunks]
+  [2/4] Kapan Periode Early Bird SR021?... OK (9.1s) [⚠ no chunks]
+  [3/4] Sebutkan minimun holding period SR021?... OK (7.2s) [⚠ no chunks]
+  [4/4] Bagaimana proses pemesanan SR021?... OK (22.2s) [⚠ no chunks]
+
+3. Total questions evaluated: 28
+
+4. Running RAGAS evaluation...
+  LLM judge: Bedrock Nova Pro (temperature=0) ✓ [wrapped for ragas 0.2.x]
+  Testing SageMaker bge-m3 embeddings... OK (dim=1024)
+  Embeddings wrapped for ragas 0.2.x ✓
+
+  ── Question ↔ Ground Truth Verification ──
+    [1] ✓ Q:  Berapa jam maksimal kerja lembur per hari?
+         GT: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+    [2] ✓ Q:  Berapa jam maksimal kerja lembur per minggu?
+         GT: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+    [3] ✓ Q:  Apa ketentuan pembayaran upah lembur?
+         GT: Upah lembur harus lebih tinggi dari upah biasa, ketentuan ru...
+    [4] ✓ Q:  Berapa jam maksimal kerja lembur per hari?
+         GT: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+    [5] ✓ Q:  Berapa jam maksimal kerja lembur per minggu?
+         GT: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+    [6] ✓ Q:  Apa ketentuan pembayaran upah lembur?
+         GT: Upah lembur harus lebih tinggi dari upah biasa, ketentuan ru...
+    [7] ✓ Q:  Berapa jam maksimal kerja lembur per hari?
+         GT: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+    [8] ✓ Q:  Berapa jam maksimal kerja lembur per minggu?
+         GT: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+    [9] ✓ Q:  Apa ketentuan pembayaran upah lembur?
+         GT: Upah lembur harus lebih tinggi dari upah biasa, ketentuan ru...
+    [10] ✓ Q:  Berapa jam maksimal kerja lembur per hari?
+         GT: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+    [11] ✓ Q:  Berapa jam maksimal kerja lembur per minggu?
+         GT: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+    [12] ✓ Q:  Apa ketentuan pembayaran upah lembur?
+         GT: Upah lembur harus lebih tinggi dari upah biasa, ketentuan ru...
+    [13] ✓ Q: Kapan masa penawaran SR021?
+         GT: Masa Penawaran 23 Agustus – 18 September 2024
+    [14] ✓ Q: Kapan Periode Early Bird SR021?
+         GT: Periode Early Bird 23 Agustus – 6 September 2024
+    [15] ✓ Q: Sebutkan minimun holding period SR021?
+         GT: Minimum Holding Period
+1. Pembeli di pasar perdana tidak dip...
+    [16] ✓ Q: Bagaimana proses pemesanan SR021?
+         GT: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui ...
+    [17] ✓ Q: Kapan masa penawaran SR021?
+         GT: Masa Penawaran 23 Agustus – 18 September 2024
+    [18] ✓ Q: Kapan Periode Early Bird SR021?
+         GT: Periode Early Bird 23 Agustus – 6 September 2024
+    [19] ✓ Q: Sebutkan minimun holding period SR021?
+         GT: Minimum Holding Period
+1. Pembeli di pasar perdana tidak dip...
+    [20] ✓ Q: Bagaimana proses pemesanan SR021?
+         GT: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui ...
+    [21] ✓ Q: Kapan masa penawaran SR021?
+         GT: Masa Penawaran 23 Agustus – 18 September 2024
+    [22] ✓ Q: Kapan Periode Early Bird SR021?
+         GT: Periode Early Bird 23 Agustus – 6 September 2024
+    [23] ✓ Q: Sebutkan minimun holding period SR021?
+         GT: Minimum Holding Period
+1. Pembeli di pasar perdana tidak dip...
+    [24] ✓ Q: Bagaimana proses pemesanan SR021?
+         GT: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui ...
+    [25] ✓ Q: Kapan masa penawaran SR021?
+         GT: Masa Penawaran 23 Agustus – 18 September 2024
+    [26] ✓ Q: Kapan Periode Early Bird SR021?
+         GT: Periode Early Bird 23 Agustus – 6 September 2024
+    [27] ✓ Q: Sebutkan minimun holding period SR021?
+         GT: Minimum Holding Period
+1. Pembeli di pasar perdana tidak dip...
+    [28] ✓ Q: Bagaimana proses pemesanan SR021?
+         GT: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui ...
+  ── Total: 28 questions, 28 with ground truth ──
+
+
+  Metrics to compute: ['faithfulness', 'answer_relevancy', 'context_precision', 'context_recall', 'answer_correctness', 'noise_sensitivity'] + summarization_score
+  Questions to evaluate: 28
+  Running... (each metric is scored independently, this takes several minutes)
+
+  [faithfulness] running... OK (avg=0.0071)
+
+  ┌── [faithfulness] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (3):
+  │     1. UU No. 13 Tahun 2003 tentang Ketenagakerjaan menetapkan bahwa kerja lembur hanya dapat dilakukan paling banyak 3 (tiga) 
+  │     2. PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK mengatur bahwa waktu kerja lembur hanya dapat dilakuk
+  │     3. Peraturan PP No. 35 Tahun 2021 memperbarui batasan waktu kerja lembur per hari menjadi 4 jam.
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] UU No. 13 Tahun 2003 tentang Ketenagakerjaan menetapkan bahwa kerja lembur hanya
+  │       Reason: There is no context retrieved to verify the claim about the specifics of UU No. 13 Tahun 2003 regarding the maximum allo
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK mengatur bahw
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary text in the citations. Ther
+  │     ✗ [NOT SUPPORTED] Peraturan PP No. 35 Tahun 2021 memperbarui batasan waktu kerja lembur per hari m
+  │       Reason: There is no context retrieved to evaluate the claim about Peraturan PP No. 35 Tahun 2021 updating the overtime work limi
+  │   Calculation: Faithfulness = 0/3 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 2: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (5):
+  │     1. According to Law No. 13 of 2003 on Manpower, the maximum overtime work is 3 (three) hours in 1 (one) day.
+  │     2. According to Law No. 13 of 2003 on Manpower, the maximum overtime work is 14 (fourteen) hours in 1 (one) week.
+  │     3. Government Regulation No. 35 of 2021 stipulates that the maximum overtime work is 4 (four) hours in 1 (one) day.
+  │     4. Government Regulation No. 35 of 2021 stipulates that the maximum overtime work is 18 (eighteen) hours in 1 (one) week.
+  │     5. The current applicable regulation for maximum overtime work is 18 (eighteen) hours in 1 (one) week according to Governme
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] According to Law No. 13 of 2003 on Manpower, the maximum overtime work is 3 (thr
+  │       Reason: There is no context retrieved to verify the claim about Law No. 13 of 2003 on Manpower regarding the maximum overtime wo
+  │     ✗ [NOT SUPPORTED] According to Law No. 13 of 2003 on Manpower, the maximum overtime work is 14 (fo
+  │       Reason: There is no context retrieved to verify the claim about Law No. 13 of 2003 on Manpower regarding the maximum overtime wo
+  │     ✗ [NOT SUPPORTED] Government Regulation No. 35 of 2021 stipulates that the maximum overtime work i
+  │       Reason: No context was retrieved to verify the claim about Government Regulation No. 35 of 2021.
+  │     ✗ [NOT SUPPORTED] Government Regulation No. 35 of 2021 stipulates that the maximum overtime work i
+  │       Reason: There is no context retrieved to verify the claim about Government Regulation No. 35 of 2021.
+  │     ✗ [NOT SUPPORTED] The current applicable regulation for maximum overtime work is 18 (eighteen) hou
+  │       Reason: There is no context retrieved to verify the claim about the regulation for maximum overtime work according to Government
+  │   Calculation: Faithfulness = 0/5 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 3: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (6):
+  │     1. Employers who require employees to work beyond the standard working hours as defined in Article 21 paragraph (2) are obl
+  │     2. The obligation to pay Overtime Wages is excluded for employees in certain job categories [1].
+  │     3. For the first hour of overtime work, the wage is paid at 1.5 (one point five) times the hourly wage, and for each subseq
+  │     4. Companies employing workers are required to pay Overtime Wages if overtime work is performed on weekly rest days and/or 
+  │     5. Companies employing workers during Overtime Work are obligated to pay Overtime Wages, provide sufficient rest opportunit
+  │     6. Overtime wages must be paid by employers who require employees to work beyond standard working hours, on weekly rest day
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] Employers who require employees to work beyond the standard working hours as def
+  │       Reason: No context was retrieved to evaluate the claim, as the API did not return the necessary information in the citations.
+  │     ✗ [NOT SUPPORTED] The obligation to pay Overtime Wages is excluded for employees in certain job ca
+  │       Reason: There is no context retrieved to evaluate the claim about the exclusion of the obligation to pay overtime wages for cert
+  │     ✗ [NOT SUPPORTED] For the first hour of overtime work, the wage is paid at 1.5 (one point five) ti
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary information in the citation
+  │     ✗ [NOT SUPPORTED] Companies employing workers are required to pay Overtime Wages if overtime work 
+  │       Reason: No context was retrieved to evaluate the claim regarding the requirement for companies to pay overtime wages on weekly r
+  │     ✗ [NOT SUPPORTED] Companies employing workers during Overtime Work are obligated to pay Overtime W
+  │       Reason: No context was retrieved to evaluate the claim, as the API did not return the necessary information in the citations.
+  │     ✗ [NOT SUPPORTED] Overtime wages must be paid by employers who require employees to work beyond st
+  │       Reason: The claim cannot be verified or refuted due to the absence of context or relevant information from the provided citation
+  │   Calculation: Faithfulness = 0/6 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 4: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (4):
+  │     1. UU No. 13 Tahun 2003 tentang Ketenagakerjaan menetapkan bahwa kerja lembur maksimal adalah 3 (tiga) jam dalam 1 (satu) h
+  │     2. PP No. 35 Tahun 2021 mengatur bahwa kerja lembur maksimal adalah 4 (empat) jam dalam 1 (satu) hari.
+  │     3. PP No. 35 Tahun 2021 adalah peraturan yang berlaku saat ini mengenai batas maksimal kerja lembur per hari.
+  │     4. PP No. 35 Tahun 2021 menetapkan batas maksimal kerja lembur per hari sebanyak 4 (empat) jam.
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] UU No. 13 Tahun 2003 tentang Ketenagakerjaan menetapkan bahwa kerja lembur maksi
+  │       Reason: There is no context retrieved to verify the claim about the maximum overtime hours specified in UU No. 13 Tahun 2003 ten
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 mengatur bahwa kerja lembur maksimal adalah 4 (empat) jam d
+  │       Reason: There is no context retrieved to evaluate the claim about PP No. 35 Tahun 2021 and its regulation on overtime work.
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 adalah peraturan yang berlaku saat ini mengenai batas maksi
+  │       Reason: There is no context retrieved to evaluate the claim about PP No. 35 Tahun 2021 being the current regulation on the maxim
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 menetapkan batas maksimal kerja lembur per hari sebanyak 4 
+  │       Reason: There is no context retrieved to evaluate the claim about PP No. 35 Tahun 2021 and its provisions regarding the maximum 
+  │   Calculation: Faithfulness = 0/4 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 5: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (4):
+  │     1. UU No. 13 Tahun 2003 tentang Ketenagakerjaan states that the maximum overtime work per week is 14 hours.
+  │     2. PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK states that the maximum overtime work per week is 18 
+  │     3. Dokumen [2] specifically updates the regulation regarding the maximum overtime work per week from 14 hours to 18 hours.
+  │     4. The current applicable regulation for maximum overtime work per week is 18 hours.
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] UU No. 13 Tahun 2003 tentang Ketenagakerjaan states that the maximum overtime wo
+  │       Reason: There is no context retrieved to verify the claim about the maximum overtime work per week as stated in UU No. 13 Tahun 
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK states that t
+  │       Reason: There is no context retrieved to evaluate the claim about the maximum overtime work per week as stated in PP No. 35 Tahu
+  │     ✗ [NOT SUPPORTED] Dokumen [2] specifically updates the regulation regarding the maximum overtime w
+  │       Reason: There is no context retrieved to verify the claim about the regulation update in Dokumen [2].
+  │     ✗ [NOT SUPPORTED] The current applicable regulation for maximum overtime work per week is 18 hours
+  │       Reason: There is no context provided to verify the claim about the current applicable regulation for maximum overtime work per w
+  │   Calculation: Faithfulness = 0/4 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 6: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (10):
+  │     1. Employers must pay overtime wages if they employ workers beyond the working hours specified in Article 21 paragraph (2).
+  │     2. Employers are exempt from paying overtime wages to certain categories of workers.
+  │     3. Employers must pay overtime wages if overtime work is performed on weekly rest days and/or official holidays.
+  │     4. If a company has already implemented overtime wage payments under a different name and the calculation value is the same
+  │     5. Employers must pay overtime wages, provide sufficient rest opportunities, and provide food and drinks with at least 1,40
+  │     6. Employers need worker consent to employ workers beyond the working hours specified in Article 77 paragraph (2), with a m
+  │     7. Employers must pay overtime wages if they employ workers beyond the specified working hours, on weekly rest days, or on 
+  │     8. If a worker's wage is paid daily, the monthly wage calculation is done under certain conditions.
+  │     9. If a worker's wage is paid based on unit output, the monthly wage is equal to the average earnings over the last 12 mont
+  │     10. If a worker's monthly wage is lower than the minimum wage, the monthly wage used for calculating overtime wages is the a
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] Employers must pay overtime wages if they employ workers beyond the working hour
+  │       Reason: There is no context retrieved to evaluate the claim about employers paying overtime wages according to Article 21 paragr
+  │     ✗ [NOT SUPPORTED] Employers are exempt from paying overtime wages to certain categories of workers
+  │       Reason: The claim cannot be verified or refuted due to the absence of context or relevant information. The API did not return an
+  │     ✗ [NOT SUPPORTED] Employers must pay overtime wages if overtime work is performed on weekly rest d
+  │       Reason: No context was retrieved to evaluate the claim about employers' obligations regarding overtime wages on weekly rest days
+  │     ✗ [PARTIAL] If a company has already implemented overtime wage payments under a different na
+  │       Reason: While the claim seems plausible, it cannot be fully supported or refuted without additional context or information. The 
+  │     ✗ [NOT SUPPORTED] Employers must pay overtime wages, provide sufficient rest opportunities, and pr
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or citations. Therefore,
+  │     ✗ [NOT SUPPORTED] Employers need worker consent to employ workers beyond the working hours specifi
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return any relevant text or citations. Therefore
+  │     ✗ [NOT SUPPORTED] Employers must pay overtime wages if they employ workers beyond the specified wo
+  │       Reason: No context was retrieved to evaluate the claim, as the API did not return the necessary information in the citations.
+  │     ✗ [NOT SUPPORTED] If a worker's wage is paid daily, the monthly wage calculation is done under cer
+  │       Reason: There is no context provided to evaluate the claim about how monthly wage calculations are done when a worker's wage is 
+  │     ✗ [NOT SUPPORTED] If a worker's wage is paid based on unit output, the monthly wage is equal to th
+  │       Reason: Without any context or data provided, it is impossible to verify the claim that a worker's monthly wage, when paid based
+  │     ✗ [NOT SUPPORTED] If a worker's monthly wage is lower than the minimum wage, the monthly wage used
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary information in the citation
+  │   Calculation: Faithfulness = 0/10 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 7: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (5):
+  │     1. According to the provisions in PP No. 35 Tahun 2021, overtime work can only be done for a maximum of 4 (four) hours in 1
+  │     2. PP No. 35 Tahun 2021 sets the maximum overtime limit that must be adhered to by companies.
+  │     3. UU No. 13 Tahun 2003 stipulates that overtime work can only be done for a maximum of 3 (three) hours in 1 (one) day.
+  │     4. PP No. 35 Tahun 2021 specifically updates the overtime provision to 4 hours per day.
+  │     5. The current applicable regulation is a maximum of 4 hours of overtime work per day.
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] According to the provisions in PP No. 35 Tahun 2021, overtime work can only be d
+  │       Reason: There is no context retrieved to evaluate the claim regarding the provisions in PP No. 35 Tahun 2021 about overtime work
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 sets the maximum overtime limit that must be adhered to by 
+  │       Reason: There is no context retrieved to evaluate the claim about PP No. 35 Tahun 2021 setting the maximum overtime limit for co
+  │     ✗ [NOT SUPPORTED] UU No. 13 Tahun 2003 stipulates that overtime work can only be done for a maximu
+  │       Reason: There is no context retrieved to verify the claim about UU No. 13 Tahun 2003 and its stipulations on overtime work.
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 specifically updates the overtime provision to 4 hours per 
+  │       Reason: There is no context retrieved to evaluate the claim about PP No. 35 Tahun 2021 updating the overtime provision.
+  │     ✗ [NOT SUPPORTED] The current applicable regulation is a maximum of 4 hours of overtime work per d
+  │       Reason: There is no context provided to evaluate the claim about the regulation on overtime work.
+  │   Calculation: Faithfulness = 0/5 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 8: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (8):
+  │     1. Menurut UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat dilakukan paling banyak 3 jam dalam 1 har
+  │     2. Menurut UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat dilakukan paling banyak 14 jam dalam 1 mi
+  │     3. Menurut PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK, waktu kerja lembur hanya dapat dilakukan pal
+  │     4. Menurut PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK, waktu kerja lembur hanya dapat dilakukan pal
+  │     5. Ada perbedaan antara UU dan PP mengenai maksimal jam kerja lembur per minggu.
+  │     6. UU No. 13 Tahun 2003 menetapkan maksimal 14 jam kerja lembur per minggu.
+  │     7. PP No. 35 Tahun 2021 menetapkan maksimal 18 jam kerja lembur per minggu.
+  │     8. Dokumen tidak menjelaskan apakah PP No. 35 Tahun 2021 secara khusus memperbarui ketentuan UU No. 13 Tahun 2003 mengenai 
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] Menurut UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat d
+  │       Reason: There is no context retrieved to verify the claim about the limitations on overtime work according to UU No. 13 Tahun 20
+  │     ✗ [NOT SUPPORTED] Menurut UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat d
+  │       Reason: No context was retrieved to verify the claim about the maximum number of overtime hours allowed per week according to UU
+  │     ✗ [NOT SUPPORTED] Menurut PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK, wakt
+  │       Reason: There is no context retrieved to evaluate the claim about PP No. 35 Tahun 2021 regarding overtime work hours.
+  │     ✗ [NOT SUPPORTED] Menurut PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK, wakt
+  │       Reason: There is no context retrieved to evaluate the claim about PP No. 35 Tahun 2021 regarding overtime work limits.
+  │     ✗ [NOT SUPPORTED] Ada perbedaan antara UU dan PP mengenai maksimal jam kerja lembur per minggu.
+  │       Reason: There is no context provided to evaluate the claim about the difference between UU (Undang-Undang, or Law) and PP (Perat
+  │     ✗ [NOT SUPPORTED] UU No. 13 Tahun 2003 menetapkan maksimal 14 jam kerja lembur per minggu.
+  │       Reason: There is no context retrieved to evaluate the claim about UU No. 13 Tahun 2003 and its provisions regarding overtime wor
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 menetapkan maksimal 18 jam kerja lembur per minggu.
+  │       Reason: There is no context retrieved to evaluate the claim about PP No. 35 Tahun 2021 and its provisions regarding overtime wor
+  │     ✗ [NOT SUPPORTED] Dokumen tidak menjelaskan apakah PP No. 35 Tahun 2021 secara khusus memperbarui 
+  │       Reason: There is no context retrieved to evaluate the claim about whether the document explains the specific updates made by PP 
+  │   Calculation: Faithfulness = 0/8 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 9: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (5):
+  │     1. Pasal 21 ayat (2) PP No. 35 Tahun 2021 menetapkan bahwa perusahaan wajib membayar upah kerja lembur untuk karyawan yang 
+  │     2. Pasal 27 PP No. 35 Tahun 2021 menegaskan bahwa pengusaha yang mempekerjakan karyawan melebihi waktu kerja wajib membayar
+  │     3. Pasal 78 UU No. 13 Tahun 2003 menetapkan bahwa pengusaha yang mempekerjakan karyawan melebihi waktu kerja wajib memenuhi
+  │     4. Pasal 29 PP No. 35 Tahun 2021 menetapkan bahwa perusahaan yang mempekerjakan karyawan selama waktu kerja lembur berkewaj
+  │     5. Pasal 39 PP No. 36 Tahun 2021 menegaskan bahwa upah kerja lembur wajib dibayar oleh pengusaha yang mempekerjakan karyawa
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] Pasal 21 ayat (2) PP No. 35 Tahun 2021 menetapkan bahwa perusahaan wajib membaya
+  │       Reason: There is no context retrieved to verify the claim about Pasal 21 ayat (2) PP No. 35 Tahun 2021 regarding the requirement
+  │     ✗ [NOT SUPPORTED] Pasal 27 PP No. 35 Tahun 2021 menegaskan bahwa pengusaha yang mempekerjakan kary
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return any relevant text or citations. Therefore
+  │     ✗ [NOT SUPPORTED] Pasal 78 UU No. 13 Tahun 2003 menetapkan bahwa pengusaha yang mempekerjakan kary
+  │       Reason: No context was retrieved to verify the claim about Pasal 78 UU No. 13 Tahun 2003.
+  │     ✗ [NOT SUPPORTED] Pasal 29 PP No. 35 Tahun 2021 menetapkan bahwa perusahaan yang mempekerjakan kar
+  │       Reason: The claim cannot be verified or refuted due to the absence of context or relevant information from the provided sources.
+  │     ✗ [NOT SUPPORTED] Pasal 39 PP No. 36 Tahun 2021 menegaskan bahwa upah kerja lembur wajib dibayar o
+  │       Reason: There is no context retrieved to verify the claim about Pasal 39 PP No. 36 Tahun 2021 regarding the payment of overtime 
+  │   Calculation: Faithfulness = 0/5 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 10: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (3):
+  │     1. The maximum overtime work per day is **3 hours** according to Article 78 of Law No. 13 Year 2003 on Manpower [1].
+  │     2. The maximum overtime work per day is **4 hours** according to Article 26 of Government Regulation No. 35 Year 2021 on Wo
+  │     3. Government Regulation No. 35 Year 2021 specifically updates the provision regarding the maximum overtime work per day to
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The maximum overtime work per day is **3 hours** according to Article 78 of Law 
+  │       Reason: No context was retrieved to verify the claim about the maximum overtime work per day according to Article 78 of Law No. 
+  │     ✗ [NOT SUPPORTED] The maximum overtime work per day is **4 hours** according to Article 26 of Gove
+  │       Reason: No context was retrieved to verify the claim about the maximum overtime work per day according to the specified regulati
+  │     ✗ [NOT SUPPORTED] Government Regulation No. 35 Year 2021 specifically updates the provision regard
+  │       Reason: No context was retrieved to verify the claim about Government Regulation No. 35 Year 2021 updating the provision regardi
+  │   Calculation: Faithfulness = 0/3 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 11: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (4):
+  │     1. UU No. 13 Tahun 2003 tentang Ketenagakerjaan mengatur bahwa kerja lembur maksimal adalah 14 jam per minggu.
+  │     2. PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK mengatur bahwa kerja lembur maksimal adalah 18 jam pe
+  │     3. PP No. 35 Tahun 2021 secara khusus memperbarui ketentuan yang sama dalam UU No. 13 Tahun 2003.
+  │     4. Ketentuan yang berlaku untuk kerja lembur maksimal adalah 18 jam per minggu sesuai dengan PP No. 35 Tahun 2021.
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] UU No. 13 Tahun 2003 tentang Ketenagakerjaan mengatur bahwa kerja lembur maksima
+  │       Reason: There is no context retrieved to evaluate the claim about the maximum overtime hours according to UU No. 13 Tahun 2003 t
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK mengatur bahw
+  │       Reason: There is no context retrieved to evaluate the claim about PP No. 35 Tahun 2021 regarding the maximum overtime hours.
+  │     ✗ [NOT SUPPORTED] PP No. 35 Tahun 2021 secara khusus memperbarui ketentuan yang sama dalam UU No. 
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return any relevant text or citations. Therefore
+  │     ✗ [NOT SUPPORTED] Ketentuan yang berlaku untuk kerja lembur maksimal adalah 18 jam per minggu sesu
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return any relevant text or citations. Therefore
+  │   Calculation: Faithfulness = 0/4 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 12: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (9):
+  │     1. Employers who employ workers beyond the working hours as specified in Article 21 paragraph (2) are required to pay Overt
+  │     2. The obligation to pay Overtime Wages is excluded for workers in certain job grades [1].
+  │     3. If certain job grades are not regulated in the Collective Labor Agreement, employers are required to pay Overtime Wages 
+  │     4. For the first hour of overtime work, the overtime wage is paid at 1.5 (one point five) times the hourly wage, and for ea
+  │     5. Companies that employ workers are required to pay Overtime Wages if the overtime work is performed on weekly rest days a
+  │     6. If a company has implemented the payment of Overtime Wages under a different name and the calculation value of the Overt
+  │     7. Companies that employ workers during Overtime Work are obligated to pay Overtime Wages [4].
+  │     8. Employers are required to pay wages to workers who do not come to work and/or do not perform work because they are exerc
+  │     9. Overtime wages must be paid by employers who employ workers beyond working hours, on weekly rest days, or on public holi
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] Employers who employ workers beyond the working hours as specified in Article 21
+  │       Reason: The claim cannot be verified or refuted due to the absence of context or relevant information from the provided sources.
+  │     ✗ [NOT SUPPORTED] The obligation to pay Overtime Wages is excluded for workers in certain job grad
+  │       Reason: No context was retrieved to evaluate the claim about the exclusion of the obligation to pay overtime wages for workers i
+  │     ✗ [NOT SUPPORTED] If certain job grades are not regulated in the Collective Labor Agreement, emplo
+  │       Reason: No context was retrieved to evaluate the claim regarding the regulation of job grades in the Collective Labor Agreement 
+  │     ✗ [NOT SUPPORTED] For the first hour of overtime work, the overtime wage is paid at 1.5 (one point
+  │       Reason: No context was retrieved to evaluate the claim, as the API did not return the necessary information in the citations.
+  │     ✗ [NOT SUPPORTED] Companies that employ workers are required to pay Overtime Wages if the overtime
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return the necessary information in the citations
+  │     ✗ [NOT SUPPORTED] If a company has implemented the payment of Overtime Wages under a different nam
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary information (chunk_text in 
+  │     ✗ [NOT SUPPORTED] Companies that employ workers during Overtime Work are obligated to pay Overtime
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary information in the citation
+  │     ✗ [NOT SUPPORTED] Employers are required to pay wages to workers who do not come to work and/or do
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary information in the citation
+  │     ✗ [NOT SUPPORTED] Overtime wages must be paid by employers who employ workers beyond working hours
+  │       Reason: No context was retrieved to evaluate the claim, as the API did not return the necessary information in the citations.
+  │   Calculation: Faithfulness = 0/9 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 13: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Kapan masa penawaran SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (4):
+  │     1. The offering period for SR021 is from 23 August 2024 to 18 September 2024.
+  │     2. The start date of the offering period for SR021 is 23 August 2024.
+  │     3. The end date of the offering period for SR021 is 18 September 2024.
+  │     4. The information about the offering period for SR021 is supported by references [1], [2], and [3].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The offering period for SR021 is from 23 August 2024 to 18 September 2024.
+  │       Reason: There is no context provided to verify the claim about the offering period for SR021.
+  │     ✗ [NOT SUPPORTED] The start date of the offering period for SR021 is 23 August 2024.
+  │       Reason: There is no context provided to verify the claim about the start date of the offering period for SR021. The API did not 
+  │     ✗ [NOT SUPPORTED] The end date of the offering period for SR021 is 18 September 2024.
+  │       Reason: There is no context provided to verify the claim about the end date of the offering period for SR021.
+  │     ✗ [NOT SUPPORTED] The information about the offering period for SR021 is supported by references [
+  │       Reason: No context was retrieved to evaluate the claim about the offering period for SR021, as the API did not return any chunk_
+  │   Calculation: Faithfulness = 0/4 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 14: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (2):
+  │     1. The Early Bird period for SR021 is from 23 August to 6 September 2024.
+  │     2. The source for the Early Bird period information is reference [1].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The Early Bird period for SR021 is from 23 August to 6 September 2024.
+  │       Reason: There is no context provided to verify the claim about the Early Bird period for SR021.
+  │     ✗ [NOT SUPPORTED] The source for the Early Bird period information is reference [1].
+  │       Reason: No context was retrieved to verify the claim about the source for the Early Bird period information being reference [1].
+  │   Calculation: Faithfulness = 0/2 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 15: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (4):
+  │     1. The minimum holding period for SR021 is until the receipt of the first coupon.
+  │     2. New investors are allowed to sell SR021 after the first coupon.
+  │     3. The first coupon for SR021 will be received starting from 11 November 2024.
+  │     4. The source of the information is reference [1].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The minimum holding period for SR021 is until the receipt of the first coupon.
+  │       Reason: No context was retrieved to evaluate the claim about the minimum holding period for SR021.
+  │     ✗ [NOT SUPPORTED] New investors are allowed to sell SR021 after the first coupon.
+  │       Reason: There is no context provided to evaluate the claim about new investors being allowed to sell SR021 after the first coupo
+  │     ✗ [NOT SUPPORTED] The first coupon for SR021 will be received starting from 11 November 2024.
+  │       Reason: There is no context provided to verify the claim about the coupon for SR021 starting from 11 November 2024.
+  │     ✗ [NOT SUPPORTED] The source of the information is reference [1].
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary text in the citations. Ther
+  │   Calculation: Faithfulness = 0/4 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 16: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (10):
+  │     1. Nasabah must have a SID Obligasi and Subreg PermataBank to order SR021.
+  │     2. An active risk profile is required to order SR021.
+  │     3. Username & Password for PNet/PmobX are necessary to order SR021.
+  │     4. Data for “Correspondence Address” and “Correspondence City” must be filled out to order SR021. [1]
+  │     5. Ordering SR021 can only be done through Digital Channels (PermataNet & PermataMobileX). [2]
+  │     6. The ordering procedure for SR021 via Digital Channel can be downloaded as a PDF file titled “Step by Step Proses Pemesan
+  │     7. SID registration for nasabah can be done through a Branch, input by CS via WMS and approved by BSM, or through PMobX/PNe
+  │     8. Ordering is conducted through PermataNet & PermataMobile X.
+  │     9. No other ordering channels are available besides PermataNet & PermataMobileX. [3]
+  │     10. Payment is made by directly debiting the nasabah's account at PermataBank. [4]
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] Nasabah must have a SID Obligasi and Subreg PermataBank to order SR021.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant information. Therefore, we ca
+  │     ✗ [NOT SUPPORTED] An active risk profile is required to order SR021.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or citations. Therefore,
+  │     ✗ [NOT SUPPORTED] Username & Password for PNet/PmobX are necessary to order SR021.
+  │       Reason: There is no context provided to evaluate the claim about the necessity of a Username & Password for PNet/PmobX to order 
+  │     ✗ [NOT SUPPORTED] Data for “Correspondence Address” and “Correspondence City” must be filled out t
+  │       Reason: No context was retrieved to evaluate the claim, as the API did not return the necessary information in the citations.
+  │     ✗ [NOT SUPPORTED] Ordering SR021 can only be done through Digital Channels (PermataNet & PermataMo
+  │       Reason: There is no context provided to evaluate the claim about ordering SR021 being restricted to Digital Channels. Without re
+  │     ✗ [NOT SUPPORTED] The ordering procedure for SR021 via Digital Channel can be downloaded as a PDF 
+  │       Reason: No context was retrieved to verify the claim about the availability of the PDF file on the specified portal.
+  │     ✗ [NOT SUPPORTED] SID registration for nasabah can be done through a Branch, input by CS via WMS a
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary information (chunk_text in 
+  │     ✗ [NOT SUPPORTED] Ordering is conducted through PermataNet & PermataMobile X.
+  │       Reason: There is no context provided to evaluate the claim about ordering being conducted through PermataNet & PermataMobile X.
+  │     ✗ [NOT SUPPORTED] No other ordering channels are available besides PermataNet & PermataMobileX. [3
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or information. Therefor
+  │     ✗ [NOT SUPPORTED] Payment is made by directly debiting the nasabah's account at PermataBank. [4]
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or information.
+  │   Calculation: Faithfulness = 0/10 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 17: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Kapan masa penawaran SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (2):
+  │     1. The period of the SR021 offering is from 23 August 2024 to 18 September 2024.
+  │     2. The source of this information is reference [1].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The period of the SR021 offering is from 23 August 2024 to 18 September 2024.
+  │       Reason: There is no context provided to verify the claim about the period of the SR021 offering. The API did not return any rele
+  │     ✗ [NOT SUPPORTED] The source of this information is reference [1].
+  │       Reason: No context was retrieved to verify the claim about the source of the information.
+  │   Calculation: Faithfulness = 0/2 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 18: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (2):
+  │     1. The period for Early Bird SR021 is from 23 August to 6 September 2024.
+  │     2. The source of the period information for Early Bird SR021 is reference [1].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The period for Early Bird SR021 is from 23 August to 6 September 2024.
+  │       Reason: There is no context provided to verify the claim about the period for Early Bird SR021.
+  │     ✗ [NOT SUPPORTED] The source of the period information for Early Bird SR021 is reference [1].
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary information in the citation
+  │   Calculation: Faithfulness = 0/2 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 19: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (4):
+  │     1. The minimum holding period for SR021 is until the receipt of the first coupon.
+  │     2. New investors are allowed to sell SR021 after the first coupon is paid.
+  │     3. The first coupon for SR021 will be paid starting from 11 November 2024.
+  │     4. The information is sourced from reference [1].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The minimum holding period for SR021 is until the receipt of the first coupon.
+  │       Reason: No context was retrieved to evaluate the claim about the minimum holding period for SR021.
+  │     ✗ [NOT SUPPORTED] New investors are allowed to sell SR021 after the first coupon is paid.
+  │       Reason: There is no context provided to evaluate the claim about new investors being allowed to sell SR021 after the first coupo
+  │     ✗ [NOT SUPPORTED] The first coupon for SR021 will be paid starting from 11 November 2024.
+  │       Reason: There is no context provided to verify the claim about the coupon payment date for SR021.
+  │     ✗ [NOT SUPPORTED] The information is sourced from reference [1].
+  │       Reason: No context was retrieved to verify the claim that the information is sourced from reference [1].
+  │   Calculation: Faithfulness = 0/4 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 20: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (14):
+  │     1. Before ordering SR021, ensure you have a SID Obligasi and Subreg PermataBank.
+  │     2. Before ordering SR021, ensure your risk profile is active.
+  │     3. Before ordering SR021, ensure your "Correspondence Address" and "Correspondence City" data are filled in.
+  │     4. Ordering SR021 can only be done through Digital Channels (PermataNet & PermataMobileX).
+  │     5. The ordering procedure for SR021 through Digital Channels can be downloaded as a PDF file titled “Step by Step Proses Pe
+  │     6. Payment for ordering SR021 is made by directly debiting the customer's account at PermataBank.
+  │     7. Ordering SR021 is open only to Indonesian citizens (WNI).
+  │     8. To order SR021, you must have a SID Obligasi.
+  │     9. To order SR021, you must have a Securities account at PermataBank.
+  │     10. To order SR021, you must have a registered Risk Profile in WMS.
+  │     11. To order SR021, you must have access to PermataNet & PermataMobile X.
+  │     12. The minimum order amount for SR021 is Rp. 1,000,000,- (one million rupiah) per customer with multiples of Rp. 1,000,000,
+  │     13. The maximum order amount for SR021T3 is Rp. 5,000,000,000,- per customer.
+  │     14. The maximum order amount for SR021T5 is Rp. 10,000,000,000,- per customer.
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] Before ordering SR021, ensure you have a SID Obligasi and Subreg PermataBank.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or information.
+  │     ✗ [NOT SUPPORTED] Before ordering SR021, ensure your risk profile is active.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or citations.
+  │     ✗ [NOT SUPPORTED] Before ordering SR021, ensure your "Correspondence Address" and "Correspondence 
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text in the citations.
+  │     ✗ [NOT SUPPORTED] Ordering SR021 can only be done through Digital Channels (PermataNet & PermataMo
+  │       Reason: There is no context provided to evaluate the claim about ordering SR021 through specific digital channels.
+  │     ✗ [NOT SUPPORTED] The ordering procedure for SR021 through Digital Channels can be downloaded as a
+  │       Reason: No context was retrieved to verify the claim about the availability of the PDF file on the specified portal.
+  │     ✗ [NOT SUPPORTED] Payment for ordering SR021 is made by directly debiting the customer's account a
+  │       Reason: There is no context provided to evaluate the claim about the payment method for ordering SR021.
+  │     ✗ [NOT SUPPORTED] Ordering SR021 is open only to Indonesian citizens (WNI).
+  │       Reason: There is no context provided to evaluate the claim about the eligibility criteria for ordering SR021.
+  │     ✗ [NOT SUPPORTED] To order SR021, you must have a SID Obligasi.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or citations. Therefore,
+  │     ✗ [NOT SUPPORTED] To order SR021, you must have a Securities account at PermataBank.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or information.
+  │     ✗ [NOT SUPPORTED] To order SR021, you must have a registered Risk Profile in WMS.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or citations. Therefore,
+  │     ✗ [NOT SUPPORTED] To order SR021, you must have access to PermataNet & PermataMobile X.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or information. Therefor
+  │     ✗ [NOT SUPPORTED] The minimum order amount for SR021 is Rp. 1,000,000,- (one million rupiah) per c
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return any relevant text or citations. Therefore
+  │     ✗ [NOT SUPPORTED] The maximum order amount for SR021T3 is Rp. 5,000,000,000,- per customer.
+  │       Reason: There is no context provided to verify the claim about the maximum order amount for SR021T3.
+  │     ✗ [NOT SUPPORTED] The maximum order amount for SR021T5 is Rp. 10,000,000,000,- per customer.
+  │       Reason: There is no context provided to verify the claim about the maximum order amount for SR021T5.
+  │   Calculation: Faithfulness = 0/14 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 21: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Kapan masa penawaran SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (2):
+  │     1. The period of the SR021 offering is from 23 August 2024 to 18 September 2024.
+  │     2. The source of this information is reference [1].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The period of the SR021 offering is from 23 August 2024 to 18 September 2024.
+  │       Reason: There is no context provided to verify the claim about the period of the SR021 offering. The API did not return any rele
+  │     ✗ [NOT SUPPORTED] The source of this information is reference [1].
+  │       Reason: No context was retrieved to verify the claim about the source of the information.
+  │   Calculation: Faithfulness = 0/2 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 22: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (2):
+  │     1. The period for Early Bird SR021 is from 23 August to 6 September 2024.
+  │     2. The source of the period information for Early Bird SR021 is reference [1].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The period for Early Bird SR021 is from 23 August to 6 September 2024.
+  │       Reason: There is no context provided to verify the claim about the period for Early Bird SR021.
+  │     ✗ [NOT SUPPORTED] The source of the period information for Early Bird SR021 is reference [1].
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary information in the citation
+  │   Calculation: Faithfulness = 0/2 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 23: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (3):
+  │     1. The minimum holding period for SR021 is until the receipt of the first coupon.
+  │     2. The first coupon for SR021 will be received on 10 November 2024.
+  │     3. Investors are allowed to sell SR021 starting from 11 November 2024 after receiving the first coupon.
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The minimum holding period for SR021 is until the receipt of the first coupon.
+  │       Reason: No context was retrieved to evaluate the claim about the minimum holding period for SR021.
+  │     ✗ [NOT SUPPORTED] The first coupon for SR021 will be received on 10 November 2024.
+  │       Reason: There is no context provided to verify the claim about the coupon date for SR021.
+  │     ✗ [NOT SUPPORTED] Investors are allowed to sell SR021 starting from 11 November 2024 after receivi
+  │       Reason: There is no context provided to verify the claim about investors being allowed to sell SR021 starting from a specific da
+  │   Calculation: Faithfulness = 0/3 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 24: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (10):
+  │     1. Nasabah harus memiliki SID Obligasi dan Subreg PermataBank.
+  │     2. Profil risiko harus aktif.
+  │     3. Nasabah harus memiliki Username & Password PNet/PmobX.
+  │     4. Data “Correspondence Address” dan “Correspondence City” harus terisi.
+  │     5. SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX).
+  │     6. SR021 tidak tersedia melalui channel pemesanan lainnya.
+  │     7. Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file berjudul “Step by Step Proses Pemesanan 
+  │     8. Minimum pemesanan SR021 adalah Rp. 1.000.000,- (satu juta rupiah) / nasabah dengan kelipatan Rp. 1.000.000,- (satu juta 
+  │     9. Maksimum pemesanan SR021 adalah Rp. 5.000.000.000,- / nasabah untuk tenor 3 tahun.
+  │     10. Maksimum pemesanan SR021 adalah Rp. 10.000.000.000,- / nasabah untuk tenor 5 tahun.
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] Nasabah harus memiliki SID Obligasi dan Subreg PermataBank.
+  │       Reason: There is no context provided to evaluate the claim about the requirements for Nasabah regarding SID Obligasi and Subreg 
+  │     ✗ [NOT SUPPORTED] Profil risiko harus aktif.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or information. Therefor
+  │     ✗ [NOT SUPPORTED] Nasabah harus memiliki Username & Password PNet/PmobX.
+  │       Reason: There is no context provided to evaluate the claim about Nasabah needing a Username & Password for PNet/PmobX. The API d
+  │     ✗ [NOT SUPPORTED] Data “Correspondence Address” dan “Correspondence City” harus terisi.
+  │       Reason: There is no context provided to evaluate the claim about the necessity of filling in "Correspondence Address" and "Corre
+  │     ✗ [NOT SUPPORTED] SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX).
+  │       Reason: There is no context provided to evaluate the claim about SR021 being orderable only through Digital Channel (PermataNet 
+  │     ✗ [NOT SUPPORTED] SR021 tidak tersedia melalui channel pemesanan lainnya.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or information. Therefor
+  │     ✗ [NOT SUPPORTED] Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file 
+  │       Reason: There is no context retrieved to evaluate the claim, as the API did not return the necessary information (chunk_text in 
+  │     ✗ [NOT SUPPORTED] Minimum pemesanan SR021 adalah Rp. 1.000.000,- (satu juta rupiah) / nasabah deng
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or information.
+  │     ✗ [NOT SUPPORTED] Maksimum pemesanan SR021 adalah Rp. 5.000.000.000,- / nasabah untuk tenor 3 tahu
+  │       Reason: There is no context provided to evaluate the claim about the maximum order amount for SR021 with a 3-year tenor. The API
+  │     ✗ [NOT SUPPORTED] Maksimum pemesanan SR021 adalah Rp. 10.000.000.000,- / nasabah untuk tenor 5 tah
+  │       Reason: There is no context provided to evaluate the claim about the maximum order of SR021 being Rp. 10.000.000.000,- per custo
+  │   Calculation: Faithfulness = 0/10 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 25: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Kapan masa penawaran SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (2):
+  │     1. The period of the SR021 offering is from 23 August 2024 to 18 September 2024.
+  │     2. The source of this information is reference [1].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The period of the SR021 offering is from 23 August 2024 to 18 September 2024.
+  │       Reason: There is no context provided to verify the claim about the period of the SR021 offering.
+  │     ✗ [NOT SUPPORTED] The source of this information is reference [1].
+  │       Reason: No context was retrieved to verify the claim about the source of the information.
+  │   Calculation: Faithfulness = 0/2 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 26: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (2):
+  │     1. The period for Early Bird SR021 is from 23 August to 6 September 2024.
+  │     2. The source of the period information for Early Bird SR021 is reference [1].
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The period for Early Bird SR021 is from 23 August to 6 September 2024.
+  │       Reason: There is no context provided to verify the claim about the period for Early Bird SR021.
+  │     ✗ [NOT SUPPORTED] The source of the period information for Early Bird SR021 is reference [1].
+  │       Reason: No context was retrieved to verify the claim about the source of the period information for Early Bird SR021.
+  │   Calculation: Faithfulness = 0/2 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 27: [✗ FAIL] Score=0.2000
+  │   Assessment: ✗ FAIL (0.2000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (4):
+  │     1. The minimum holding period for SR021 is until the receipt of the first coupon.
+  │     2. The first coupon for SR021 will be paid on 10 November 2024.
+  │     3. New investors are allowed to sell to other parties after the first coupon.
+  │     4. The period after which new investors can sell starts from 11 November 2024.
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The minimum holding period for SR021 is until the receipt of the first coupon.
+  │       Reason: No context was retrieved to evaluate the claim about the minimum holding period for SR021.
+  │     ✗ [NOT SUPPORTED] The first coupon for SR021 will be paid on 10 November 2024.
+  │       Reason: There is no context provided to verify the claim about the coupon payment date for SR021.
+  │     ✗ [NOT SUPPORTED] New investors are allowed to sell to other parties after the first coupon.
+  │       Reason: There is no context provided to evaluate the claim about new investors selling after the first coupon.
+  │     ✗ [NOT SUPPORTED] The period after which new investors can sell starts from 11 November 2024.
+  │       Reason: There is no context provided to verify the claim about the period after which new investors can sell starting from 11 No
+  │   Calculation: Faithfulness = 0/4 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.2000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.2000
+  │
+  │ Row 28: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Extracting claims from answer...]
+  │   Claims extracted (9):
+  │     1. The SR021 ordering process is open only to Indonesian citizens (WNI).
+  │     2. Applicants must possess a SID Obligasi.
+  │     3. Applicants must have a Securities account at PermataBank.
+  │     4. Applicants must have a registered Risk Profile in WMS.
+  │     5. Applicants must have access to PermataNet & PermataMobile X. [1]
+  │     6. The ordering process for SR021 is conducted through PermataNet & PermataMobile X.
+  │     7. There are no other ordering channels available besides PermataNet & PermataMobile X. [2]
+  │     8. The minimum order amount per customer is Rp. 1,000,000,- (one million rupiah) with increments of Rp. 1,000,000,- (one mi
+  │     9. The maximum order amount per customer is Rp. 5,000,000,000,- (five billion rupiah) for a 3-year tenor and Rp. 10,000,000
+  │   [Verifying claims against contexts...]
+  │     ✗ [NOT SUPPORTED] The SR021 ordering process is open only to Indonesian citizens (WNI).
+  │       Reason: There is no context provided to evaluate the claim about the SR021 ordering process being open only to Indonesian citize
+  │     ✗ [NOT SUPPORTED] Applicants must possess a SID Obligasi.
+  │       Reason: There is no context provided to evaluate the claim that applicants must possess a SID Obligasi. Without relevant informa
+  │     ✗ [NOT SUPPORTED] Applicants must have a Securities account at PermataBank.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or citations.
+  │     ✗ [NOT SUPPORTED] Applicants must have a registered Risk Profile in WMS.
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or citations. Therefore,
+  │     ✗ [NOT SUPPORTED] Applicants must have access to PermataNet & PermataMobile X. [1]
+  │       Reason: There is no context provided to evaluate the claim, as the API did not return any relevant text or citations.
+  │     ✗ [NOT SUPPORTED] The ordering process for SR021 is conducted through PermataNet & PermataMobile X
+  │       Reason: There is no context provided to evaluate the claim about the ordering process for SR021 through PermataNet & PermataMobi
+  │     ✗ [NOT SUPPORTED] There are no other ordering channels available besides PermataNet & PermataMobil
+  │       Reason: The claim cannot be verified or refuted due to the absence of context information. The API did not return the necessary 
+  │     ✗ [NOT SUPPORTED] The minimum order amount per customer is Rp. 1,000,000,- (one million rupiah) wi
+  │       Reason: There is no context provided to verify the claim about the minimum order amount and increments.
+  │     ✗ [NOT SUPPORTED] The maximum order amount per customer is Rp. 5,000,000,000,- (five billion rupia
+  │       Reason: There is no context provided to verify the claim, as the API did not return any relevant text or citations.
+  │   Calculation: Faithfulness = 0/9 supported claims = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Significant hallucination detected. Tighten generate prompt and add 'cite only from provided context' rules
+  │   RAGAS Score: 0.0000
+  │
+  │ Summary: 0 PASS, 0 PARTIAL, 28 FAIL (avg=0.0071)
+  └── End [faithfulness] ──
+
+  [answer_relevancy] running... OK (avg=0.6032)
+
+  ┌── [answer_relevancy] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [~ PARTIAL] Score=0.7091
+  │   Assessment: ~ PARTIAL (0.7091) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat dilakukan paling banyak **3 (tiga) jam dalam 1 (satu) hari** [1]. N
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.7091) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.7091
+  │
+  │ Row 2: [~ PARTIAL] Score=0.6742
+  │   Assessment: ~ PARTIAL (0.6742) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berdasarkan ketentuan dalam UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari dan 14 (empa
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.6742) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.6742
+  │
+  │ Row 3: [~ PARTIAL] Score=0.6404
+  │   Assessment: ~ PARTIAL (0.6404) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu ker
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.6404) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.6404
+  │
+  │ Row 4: [~ PARTIAL] Score=0.6859
+  │   Assessment: ~ PARTIAL (0.6859) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam** dalam 1 (satu) hari [1]. Namun, PP No. 35 Tahu
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.6859) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.6859
+  │
+  │ Row 5: [~ PARTIAL] Score=0.6973
+  │   Assessment: ~ PARTIAL (0.6973) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berikut adalah ketentuan maksimal kerja lembur per minggu sesuai dengan dokumen yang diberikan:
+
+- Menurut **UU No. 13 Tahun 2003 tentang Ketenagakerj
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.6973) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.6973
+  │
+  │ Row 6: [~ PARTIAL] Score=0.6221
+  │   Assessment: ~ PARTIAL (0.6221) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pasal 27** [1] menyatakan bahwa pengusaha yang mempekerjaka
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.6221) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.6221
+  │
+  │ Row 7: [~ PARTIAL] Score=0.6568
+  │   Assessment: ~ PARTIAL (0.6568) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan ketentuan dalam PP No. 35 Tahun 2021, kerja lembur hanya dapat dilakukan paling lama **4 (empat) jam dalam 1 (satu) hari** [1]. Ini merupa
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.6568) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.6568
+  │
+  │ Row 8: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berikut adalah ketentuan maksimal jam kerja lembur per minggu sesuai dengan dokumen yang diberikan:
+
+- Menurut **UU No. 13 Tahun 2003 tentang Ketenaga
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 9: [~ PARTIAL] Score=0.7336
+  │   Assessment: ~ PARTIAL (0.7336) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pasal 21 ayat (2) PP No. 35 Tahun 2021** menetapkan bahwa p
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.7336) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.7336
+  │
+  │ Row 10: [~ PARTIAL] Score=0.7200
+  │   Assessment: ~ PARTIAL (0.7200) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan ketentuan yang ada dalam dokumen, jam maksimal kerja lembur per hari adalah:
+
+- **3 jam** menurut Pasal 78 UU No. 13 Tahun 2003 tentang Ke
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.7200) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.7200
+  │
+  │ Row 11: [~ PARTIAL] Score=0.5875
+  │   Assessment: ~ PARTIAL (0.5875) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: - **14 jam** per minggu, sesuai dengan UU No. 13 Tahun 2003 tentang Ketenagakerjaan [1].
+- **18 jam** per minggu, sesuai dengan PP No. 35 Tahun 2021 t
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.5875) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.5875
+  │
+  │ Row 12: [~ PARTIAL] Score=0.6404
+  │   Assessment: ~ PARTIAL (0.6404) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu k
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.6404) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.6404
+  │
+  │ Row 13: [✓ PASS] Score=0.9278
+  │   Assessment: ✓ PASS (0.9278) — Answer directly addresses the question asked
+  │   Question: Kapan masa penawaran SR021?
+  │   Answer: Masa penawaran SR021 adalah dari **23 Agustus 2024** hingga **18 September 2024** [1][2][3].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.9278) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.9278
+  │
+  │ Row 14: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Answer: Periode Early Bird SR021 adalah dari **23 Agustus – 6 September 2024** [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 15: [✓ PASS] Score=0.8229
+  │   Assessment: ✓ PASS (0.8229) — Answer directly addresses the question asked
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Answer: Minimum holding period untuk SR021 adalah sampai dengan penerimaan kupon pertama. Investor baru diperbolehkan menjual setelah kupon pertama, mulai dar
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.8229) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.8229
+  │
+  │ Row 16: [✓ PASS] Score=0.9397
+  │   Assessment: ✓ PASS (0.9397) — Answer directly addresses the question asked
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Answer: Berikut adalah langkah-langkah untuk memesan SR021:
+
+1. **Pastikan persyaratan berikut terpenuhi:**
+   - Nasabah memiliki SID Obligasi dan Subreg Perm
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.9397) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.9397
+  │
+  │ Row 17: [✓ PASS] Score=0.9078
+  │   Assessment: ✓ PASS (0.9078) — Answer directly addresses the question asked
+  │   Question: Kapan masa penawaran SR021?
+  │   Answer: Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.9078) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.9078
+  │
+  │ Row 18: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Answer: Periode Early Bird SR021 adalah dari 23 Agustus hingga 6 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 19: [✓ PASS] Score=0.8127
+  │   Assessment: ✓ PASS (0.8127) — Answer directly addresses the question asked
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Answer: Minimum holding period untuk SR021 adalah sampai penerimaan kupon pertama. Investor baru diperbolehkan menjual setelah kupon pertama dibayarkan, yaitu
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.8127) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.8127
+  │
+  │ Row 20: [~ PARTIAL] Score=0.7856
+  │   Assessment: ~ PARTIAL (0.7856) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Answer: Berikut adalah proses pemesanan SR021:
+
+1. **Sebelum Pemesanan**: Pastikan Anda memiliki SID Obligasi dan Subreg PermataBank, profil risiko aktif, dan
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ~ PARTIAL (0.7856) — Answer partially addresses the question. Improve decompose/generate prompts
+  │   RAGAS Score: 0.7856
+  │
+  │ Row 21: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   Question: Kapan masa penawaran SR021?
+  │   Answer: Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 22: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Answer: Periode Early Bird SR021 adalah dari 23 Agustus hingga 6 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 23: [✓ PASS] Score=0.8106
+  │   Assessment: ✓ PASS (0.8106) — Answer directly addresses the question asked
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Answer: Minimum holding period untuk SR021 adalah sampai penerimaan kupon pertama. Setelah menerima kupon pertama pada 10 November 2024, investor baru diperbo
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.8106) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.8106
+  │
+  │ Row 24: [✓ PASS] Score=0.8716
+  │   Assessment: ✓ PASS (0.8716) — Answer directly addresses the question asked
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Answer: Berikut adalah proses pemesanan SR021:
+
+1. **Syarat Kelayakan**:
+   - Nasabah harus memiliki SID Obligasi dan Subreg PermataBank.
+   - Profil risiko h
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.8716) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.8716
+  │
+  │ Row 25: [✓ PASS] Score=0.9153
+  │   Assessment: ✓ PASS (0.9153) — Answer directly addresses the question asked
+  │   Question: Kapan masa penawaran SR021?
+  │   Answer: Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1]. 
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.9153) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.9153
+  │
+  │ Row 26: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Answer: Periode Early Bird SR021 adalah dari 23 Agustus hingga 6 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✗ FAIL (0.0000) — Answer is off-topic. Review decompose_query prompt and intent classification
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 27: [✓ PASS] Score=0.8218
+  │   Assessment: ✓ PASS (0.8218) — Answer directly addresses the question asked
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Answer: Minimum holding period SR021 adalah sampai dengan penerimaan kupon pertama, yang dibayarkan pada tanggal 10 November 2024. Investor baru diperbolehkan
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.8218) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.8218
+  │
+  │ Row 28: [✓ PASS] Score=0.9064
+  │   Assessment: ✓ PASS (0.9064) — Answer directly addresses the question asked
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Answer: Berikut adalah proses pemesanan SR021:
+
+1. **Syarat Kelayakan**:
+   - Terbuka hanya untuk WNI.
+   - Telah memiliki SID Obligasi.
+   - Telah memiliki r
+  │   Comparison: Answer embedding vs Question embedding (cosine similarity)
+  │   Method: LLM generates N questions from the answer, embeddings compared to original
+  │   Assessment: ✓ PASS (0.9064) — Answer directly addresses the question asked
+  │   RAGAS Score: 0.9064
+  │
+  │ Summary: 10 PASS, 12 PARTIAL, 6 FAIL (avg=0.6032)
+  └── End [answer_relevancy] ──
+
+  [context_precision] running... OK (avg=0.0000)
+
+  ┌── [context_precision] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is missing (indicated by "NO CONTEXT RETRIEVED"), so it cannot provide any informa
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 2: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 3: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 4: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is missing (indicated by "NO CONTEXT RETRIEVED"), so it cannot provide any informa
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 5: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 6: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is missing (indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 7: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is missing (indicated by "NO CONTEXT RETRIEVED"), so it cannot provide any informa
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 8: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 9: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is missing (indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 10: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is missing (indicated by "NO CONTEXT RETRIEVED"), so it cannot provide any informa
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 11: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 12: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is missing (indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 13: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Kapan masa penawaran SR021?
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 14: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Ground Truth: Periode Early Bird 23 Agustus – 6 September 2024
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 15: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Ground Truth: Minimum Holding Period
+1. Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pertama.
+2. Holding period
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 16: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Ground Truth: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia channel pemesanan lainnya
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 17: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Kapan masa penawaran SR021?
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 18: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Ground Truth: Periode Early Bird 23 Agustus – 6 September 2024
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 19: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Ground Truth: Minimum Holding Period
+1. Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pertama.
+2. Holding period
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 20: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Ground Truth: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia channel pemesanan lainnya
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 21: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Kapan masa penawaran SR021?
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 22: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Ground Truth: Periode Early Bird 23 Agustus – 6 September 2024
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 23: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Ground Truth: Minimum Holding Period
+1. Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pertama.
+2. Holding period
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 24: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Ground Truth: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia channel pemesanan lainnya
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 25: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Kapan masa penawaran SR021?
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 26: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Ground Truth: Periode Early Bird 23 Agustus – 6 September 2024
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 27: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Ground Truth: Minimum Holding Period
+1. Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pertama.
+2. Holding period
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 28: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Poor retrieval quality. Review embedding model, chunking strategy, and query expansion
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Ground Truth: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia channel pemesanan lainnya
+  │   Contexts (ranked):
+  │     [1] [NO CONTEXT RETRIEVED — API did not return chunk_text in citations]
+  │   [Checking each context's relevance to question...]
+  │     ✗ [Rank 1] NO: The context chunk is empty as indicated by "[NO CONTEXT RETRIEVED — API did not return chunk_text in
+  │   Method: LLM judges if each context is relevant to ground truth, precision@k computed
+  │   RAGAS Score: 0.0000
+  │
+  │ Summary: 0 PASS, 0 PARTIAL, 28 FAIL (avg=0.0000)
+  └── End [context_precision] ──
+
+  [context_recall] running... OK (avg=0.0000)
+
+  ┌── [context_recall] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Maksimal 3 jam per hari
+  │       Reason: No context provided to attribute this statement to.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: No context provided to attribute this reference to.
+  │   Calculation: Context Recall = 0/2 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 2: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Maksimal 14 jam per minggu
+  │       Reason: There is no context provided to attribute this statement to.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: There is no context provided to attribute this reference to.
+  │   Calculation: Context Recall = 0/2 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 3: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Upah lembur harus lebih tinggi dari upah biasa.
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Ketentuan rumus teknis diatur di Keputusan Menteri.
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 3
+  │       Reason: No context provided to attribute this statement.
+  │   Calculation: Context Recall = 0/3 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 4: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Maksimal 3 jam per hari
+  │       Reason: No context provided to attribute this statement to.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: No context provided to attribute this reference to.
+  │   Calculation: Context Recall = 0/2 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 5: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Maksimal 14 jam per minggu
+  │       Reason: No context provided to attribute this statement to.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: No context provided to attribute this statement to.
+  │   Calculation: Context Recall = 0/2 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 6: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Upah lembur harus lebih tinggi dari upah biasa.
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Ketentuan rumus teknis diatur di Keputusan Menteri.
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 3
+  │       Reason: No context provided to attribute this statement.
+  │   Calculation: Context Recall = 0/3 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 7: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Maksimal 3 jam per hari
+  │       Reason: No context provided to attribute this statement to.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: No context provided to attribute this reference to.
+  │   Calculation: Context Recall = 0/2 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 8: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Maksimal 14 jam per minggu
+  │       Reason: No context provided to attribute this statement to.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: No context provided to attribute this statement to.
+  │   Calculation: Context Recall = 0/2 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 9: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Upah lembur harus lebih tinggi dari upah biasa.
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Ketentuan rumus teknis diatur di Keputusan Menteri.
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 3
+  │       Reason: No context provided to attribute this statement.
+  │   Calculation: Context Recall = 0/3 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 10: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Maksimal 3 jam per hari
+  │       Reason: No context provided to attribute this statement to.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: No context provided to attribute this reference to.
+  │   Calculation: Context Recall = 0/2 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 11: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Maksimal 14 jam per minggu
+  │       Reason: No context provided to attribute this statement to.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 1b
+  │       Reason: No context provided to attribute this statement to.
+  │   Calculation: Context Recall = 0/2 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 12: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Upah lembur harus lebih tinggi dari upah biasa.
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Ketentuan rumus teknis diatur di Keputusan Menteri.
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] UU 13/2003 Pasal 78 ayat 3
+  │       Reason: No context provided to attribute this statement.
+  │   Calculation: Context Recall = 0/3 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 13: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Kapan masa penawaran SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Masa Penawaran 23 Agustus – 18 September 2024
+  │       Reason: No context was retrieved to attribute this statement to.
+  │   Calculation: Context Recall = 0/1 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 14: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Periode Early Bird 23 Agustus – 6 September 2024
+  │       Reason: No context is available to attribute this statement to.
+  │   Calculation: Context Recall = 0/1 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 15: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pe
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Holding period sampai dengan 1 (satu) kali pembayaran kupon dengan pembayaran kupon ke-1 pada tangga
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Investor baru diperbolehkan menjual kepada pihak lain setelah kupon pertama mulai dari tanggal 11 No
+  │       Reason: No context provided to attribute this statement.
+  │   Calculation: Context Recall = 0/3 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 16: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia c
+  │       Reason: No context provided to confirm the exclusive availability of SR021 ordering through Digital Channel.
+  │     ✗ [NO] Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file berjudul “Step by St
+  │       Reason: No context provided to confirm the availability of the PDF file for download.
+  │     ✗ [NO] Proses pendaftaran SID nasabah dilakukan melalui Cabang, input oleh CS melalui WMS dan approve oleh 
+  │       Reason: No context provided to confirm the process of SID registration through branch and system inputs.
+  │     ✗ [NO] Proses pendaftaran SID nasabah dilakukan melalui PMobX/PNet
+  │       Reason: No context provided to confirm the process of SID registration through PMobX/PNet.
+  │   Calculation: Context Recall = 0/4 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 17: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Kapan masa penawaran SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Masa Penawaran 23 Agustus – 18 September 2024
+  │       Reason: No context was retrieved to attribute this statement to.
+  │   Calculation: Context Recall = 0/1 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 18: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Periode Early Bird 23 Agustus – 6 September 2024
+  │       Reason: No context is available to attribute this statement to.
+  │   Calculation: Context Recall = 0/1 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 19: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pe
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Holding period sampai dengan 1 (satu) kali pembayaran kupon dengan pembayaran kupon ke-1 pada tangga
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Investor baru diperbolehkan menjual kepada pihak lain setelah kupon pertama mulai dari tanggal 11 No
+  │       Reason: No context provided to attribute this statement.
+  │   Calculation: Context Recall = 0/3 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 20: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia c
+  │       Reason: No context provided to confirm the exclusive availability of SR021 ordering through Digital Channel.
+  │     ✗ [NO] Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file berjudul “Step by St
+  │       Reason: No context provided to confirm the availability of the PDF file for the ordering process.
+  │     ✗ [NO] Proses pendaftaran SID nasabah dilakukan melalui Cabang, input oleh CS melalui WMS dan approve oleh 
+  │       Reason: No context provided to confirm the process of SID registration through branch and system approval.
+  │     ✗ [NO] Proses pendaftaran SID nasabah dilakukan melalui PMobX/PNet
+  │       Reason: No context provided to confirm the process of SID registration through PMobX/PNet.
+  │   Calculation: Context Recall = 0/4 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 21: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Kapan masa penawaran SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Masa Penawaran 23 Agustus – 18 September 2024
+  │       Reason: No context was retrieved to attribute this statement to.
+  │   Calculation: Context Recall = 0/1 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 22: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Periode Early Bird 23 Agustus – 6 September 2024
+  │       Reason: No context is available to attribute this statement to.
+  │   Calculation: Context Recall = 0/1 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 23: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pe
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Holding period sampai dengan 1 (satu) kali pembayaran kupon dengan pembayaran kupon ke-1 pada tangga
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Investor baru diperbolehkan menjual kepada pihak lain setelah kupon pertama mulai dari tanggal 11 No
+  │       Reason: No context provided to attribute this statement.
+  │   Calculation: Context Recall = 0/3 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 24: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia c
+  │       Reason: No context provided to confirm the exclusive availability of SR021 ordering through Digital Channel.
+  │     ✗ [NO] Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file berjudul “Step by St
+  │       Reason: No context provided to confirm the availability of the PDF file for the ordering process.
+  │     ✗ [NO] Proses pendaftaran SID nasabah dilakukan melalui Cabang, input oleh CS melalui WMS dan approve oleh 
+  │       Reason: No context provided to confirm the process of SID registration through branch and system approval.
+  │     ✗ [NO] Proses pendaftaran SID nasabah dilakukan melalui PMobX/PNet
+  │       Reason: No context provided to confirm the process of SID registration through PMobX/PNet.
+  │   Calculation: Context Recall = 0/4 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 25: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Kapan masa penawaran SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Masa Penawaran 23 Agustus – 18 September 2024
+  │       Reason: No context was retrieved to attribute this statement to.
+  │   Calculation: Context Recall = 0/1 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 26: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Periode Early Bird 23 Agustus – 6 September 2024
+  │       Reason: No context is available to attribute this statement to.
+  │   Calculation: Context Recall = 0/1 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 27: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pe
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Holding period sampai dengan 1 (satu) kali pembayaran kupon dengan pembayaran kupon ke-1 pada tangga
+  │       Reason: No context provided to attribute this statement.
+  │     ✗ [NO] Investor baru diperbolehkan menjual kepada pihak lain setelah kupon pertama mulai dari tanggal 11 No
+  │       Reason: No context provided to attribute this statement.
+  │   Calculation: Context Recall = 0/3 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 28: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Checking GT statements attribution to contexts...]
+  │     ✗ [NO] SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia c
+  │       Reason: No context provided to confirm the exclusive availability of SR021 ordering through Digital Channel.
+  │     ✗ [NO] Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file berjudul “Step by St
+  │       Reason: No context provided to confirm the availability of the PDF file for the ordering process.
+  │     ✗ [NO] Proses pendaftaran SID nasabah dilakukan melalui Cabang, input oleh CS melalui WMS dan approve oleh 
+  │       Reason: No context provided to confirm the process of SID registration through branch and system approval.
+  │     ✗ [NO] Proses pendaftaran SID nasabah dilakukan melalui PMobX/PNet
+  │       Reason: No context provided to confirm the process of SID registration through PMobX/PNet.
+  │   Calculation: Context Recall = 0/4 GT statements attributed = 0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Critical information gaps. Check if relevant documents are in the knowledge base
+  │   RAGAS Score: 0.0000
+  │
+  │ Summary: 0 PASS, 0 PARTIAL, 28 FAIL (avg=0.0000)
+  └── End [context_recall] ──
+
+  [answer_correctness] running... OK (avg=0.5075)
+
+  ┌── [answer_correctness] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [~ PARTIAL] Score=0.5514
+  │   Assessment: ~ PARTIAL (0.5514) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ UU No. 13 Tahun 2003: 3 jam per hari
+  │   FP (wrong claims in answer): 2
+  │     ✗ PP No. 35 Tahun 2021: 4 jam per hari
+  │     ✗ Oleh karena itu, peraturan yang lebih baru ini secara khusus memperbarui batasan waktu kerja lembur 
+  │   FN (missing from answer): 2
+  │     ○ UU No. 13 Tahun 2003 Pasal 78 ayat 1b
+  │     ○ Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+2)) = 0.3333
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.5514
+  │   Assessment: ~ PARTIAL (0.5514) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.5514
+  │
+  │ Row 2: [✗ FAIL] Score=0.4331
+  │   Assessment: ✗ FAIL (0.4331) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Maksimal 14 jam per minggu
+  │   FP (wrong claims in answer): 3
+  │     ✗ Kerja lembur maksimal adalah 3 (tiga) jam dalam 1 (satu) hari dan 14 (empat belas) jam dalam 1 (satu
+  │     ✗ PP No. 35 Tahun 2021 mengatur bahwa kerja lembur maksimal adalah 4 (empat) jam dalam 1 (satu) hari d
+  │     ✗ Ketentuan yang berlaku saat ini adalah kerja lembur maksimal 18 (delapan belas) jam dalam 1 (satu) m
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(3+0)) = 0.4000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4331
+  │   Assessment: ✗ FAIL (0.4331) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4331
+  │
+  │ Row 3: [✗ FAIL] Score=0.4495
+  │   Assessment: ✗ FAIL (0.4495) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Upah kerja lembur wajib dibayar oleh Pengusaha yang mempekerjakan Pekerja/ Buruh melebihi waktu kerj
+  │   FP (wrong claims in answer): 5
+  │     ✗ Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu kerja sebagaimana dimaksud dalam Pasal 21 
+  │     ✗ Kewajiban membayar Upah Kerja Lembur dikecualikan bagi Pekerja/Buruh dalam golongan jabatan tertentu
+  │     ✗ Untuk jam kerja lembur pertama, upah dibayar sebesar 1,5 (satu koma lima) kali Upah sejam, dan untuk
+  │     ✗ Perusahaan yang mempekerjakan Pekerja/Buruh wajib membayar Upah Kerja Lembur, apabila kerja lembur d
+  │     ✗ Perusahaan yang mempekerjakan Pekerja/Buruh selama Waktu Kerja Lembur berkewajiban membayar Upah Ker
+  │   FN (missing from answer): 2
+  │     ○ Upah lembur harus lebih tinggi dari upah biasa.
+  │     ○ Ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(5+2)) = 0.2222
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4495
+  │   Assessment: ✗ FAIL (0.4495) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4495
+  │
+  │ Row 4: [✗ FAIL] Score=0.4280
+  │   Assessment: ✗ FAIL (0.4280) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ UU No. 13 Tahun 2003: 3 jam
+  │   FP (wrong claims in answer): 2
+  │     ✗ PP No. 35 Tahun 2021: 4 jam
+  │     ✗ Oleh karena itu, peraturan yang berlaku saat ini adalah PP No. 35 Tahun 2021, yang menetapkan batas 
+  │   FN (missing from answer): 1
+  │     ○ UU 13/2003 Pasal 78 ayat 1b
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+1)) = 0.4000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4280
+  │   Assessment: ✗ FAIL (0.4280) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4280
+  │
+  │ Row 5: [✗ FAIL] Score=0.4351
+  │   Assessment: ✗ FAIL (0.4351) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Menurut UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah 14 jam per minggu
+  │   FP (wrong claims in answer): 3
+  │     ✗ Menurut PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK, kerja lembur maksimal ad
+  │     ✗ Dokumen [2] secara khusus memperbarui ketentuan mengenai maksimal kerja lembur per minggu dari 14 ja
+  │     ✗ Oleh karena itu, ketentuan yang berlaku saat ini adalah 18 jam per minggu.
+  │   FN (missing from answer): 1
+  │     ○ UU 13/2003 Pasal 78 ayat 1b.
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(3+1)) = 0.3333
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4351
+  │   Assessment: ✗ FAIL (0.4351) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4351
+  │
+  │ Row 6: [✗ FAIL] Score=0.3664
+  │   Assessment: ✗ FAIL (0.3664) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Pengusaha yang mempekerjakan pekerja/buruh melebihi waktu kerja sebagaimana dimaksud dalam Pasal 77 
+  │   FP (wrong claims in answer): 6
+  │     ✗ Pasal 27 menyatakan bahwa pengusaha yang mempekerjakan pekerja/buruh melebihi waktu kerja sebagaiman
+  │     ✗ Pasal 21 ayat (2) menjelaskan bahwa perusahaan yang mempekerjakan pekerja/buruh wajib membayar Upah 
+  │     ✗ Pasal 34 menyatakan bahwa dalam hal perusahaan telah melaksanakan pembayaran Upah Kerja Lembur denga
+  │     ✗ Pasal 29 menjelaskan bahwa perusahaan yang mempekerjakan pekerja/buruh selama Waktu Kerja Lembur ber
+  │     ✗ Pasal 39 menyatakan bahwa upah kerja lembur wajib dibayar oleh pengusaha yang mempekerjakan pekerja/
+  │     ✗ Pasal 33 menjelaskan bahwa dalam hal upah pekerja/buruh dibayar secara harian, maka penghitungan bes
+  │   FN (missing from answer): 1
+  │     ○ Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. 
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(6+1)) = 0.2222
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.3664
+  │   Assessment: ✗ FAIL (0.3664) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.3664
+  │
+  │ Row 7: [✗ FAIL] Score=0.3664
+  │   Assessment: ✗ FAIL (0.3664) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Maksimal 3 jam per hari
+  │   FP (wrong claims in answer): 2
+  │     ✗ Berdasarkan ketentuan dalam PP No. 35 Tahun 2021, kerja lembur hanya dapat dilakukan paling lama 4 (
+  │     ✗ PP No. 35 Tahun 2021 secara khusus memperbarui ketentuan ini menjadi 4 jam per hari, sehingga ketent
+  │   FN (missing from answer): 1
+  │     ○ UU No. 13 Tahun 2003 menetapkan bahwa kerja lembur hanya dapat dilakukan paling banyak 3 (tiga) jam 
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+1)) = 0.4000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.3664
+  │   Assessment: ✗ FAIL (0.3664) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.3664
+  │
+  │ Row 8: [~ PARTIAL] Score=0.5193
+  │   Assessment: ~ PARTIAL (0.5193) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Maksimal 14 jam per minggu
+  │   FP (wrong claims in answer): 2
+  │     ✗ Menurut PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK, waktu kerja lembur hanya
+  │     ✗ Ada perbedaan antara UU dan PP mengenai maksimal jam kerja lembur per minggu. UU menetapkan maksimal
+  │   FN (missing from answer): 1
+  │     ○ UU 13/2003 Pasal 78 ayat 1b
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+1)) = 0.4000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.5193
+  │   Assessment: ~ PARTIAL (0.5193) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.5193
+  │
+  │ Row 9: [✗ FAIL] Score=0.3636
+  │   Assessment: ✗ FAIL (0.3636) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Pasal 78 UU No. 13 Tahun 2003** menetapkan bahwa pengusaha yang mempekerjakan karyawan melebihi wakt
+  │   FP (wrong claims in answer): 4
+  │     ✗ Pasal 21 ayat (2) PP No. 35 Tahun 2021** menetapkan bahwa perusahaan wajib membayar upah kerja lembu
+  │     ✗ Pasal 27 PP No. 35 Tahun 2021** menegaskan bahwa pengusaha yang mempekerjakan karyawan melebihi wakt
+  │     ✗ Pasal 29 PP No. 35 Tahun 2021** menetapkan bahwa perusahaan yang mempekerjakan karyawan selama waktu
+  │     ✗ Pasal 39 PP No. 36 Tahun 2021** menegaskan bahwa upah kerja lembur wajib dibayar oleh pengusaha yang
+  │   FN (missing from answer): 2
+  │     ○ Upah lembur harus lebih tinggi dari upah biasa.
+  │     ○ Ketentuan rumus teknis diatur di Keputusan Menteri.
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(4+2)) = 0.2500
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.3636
+  │   Assessment: ✗ FAIL (0.3636) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.3636
+  │
+  │ Row 10: [✗ FAIL] Score=0.4784
+  │   Assessment: ✗ FAIL (0.4784) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ 3 jam menurut Pasal 78 UU No. 13 Tahun 2003 tentang Ketenagakerjaan [1].
+  │   FP (wrong claims in answer): 2
+  │     ✗ 4 jam menurut Pasal 26 PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK [2].
+  │     ✗ PP No. 35 Tahun 2021 secara khusus memperbarui ketentuan mengenai jam maksimal kerja lembur per hari
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+0)) = 0.5000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4784
+  │   Assessment: ✗ FAIL (0.4784) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4784
+  │
+  │ Row 11: [~ PARTIAL] Score=0.5619
+  │   Assessment: ~ PARTIAL (0.5619) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ 14 jam** per minggu, sesuai dengan UU No. 13 Tahun 2003 tentang Ketenagakerjaan [1].
+  │   FP (wrong claims in answer): 1
+  │     ✗ 18 jam** per minggu, sesuai dengan PP No. 35 Tahun 2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PH
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(1+0)) = 0.6667
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.5619
+  │   Assessment: ~ PARTIAL (0.5619) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.5619
+  │
+  │ Row 12: [✗ FAIL] Score=0.4120
+  │   Assessment: ✗ FAIL (0.4120) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Upah kerja lembur wajib dibayar oleh Pengusaha yang mempekerjakan Pekerja/ Buruh melebihi waktu kerj
+  │   FP (wrong claims in answer): 8
+  │     ✗ Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu kerja sebagaimana dimaksud dalam Pasal 21 
+  │     ✗ Kewajiban membayar Upah Kerja Lembur dikecualikan bagi Pekerja/Buruh dalam golongan jabatan tertentu
+  │     ✗ Apabila golongan jabatan tertentu tidak diatur dalam Perjanjian Kerja Bersama maka Pengusaha wajib m
+  │     ✗ Untuk jam kerja lembur pertama, upah lembur dibayar sebesar 1,5 (satu koma lima) kali Upah sejam, da
+  │     ✗ Perusahaan yang mempekerjakan Pekerja/Buruh wajib membayar Upah Kerja Lembur, apabila kerja lembur d
+  │     ✗ Dalam hal Perusahaan telah melaksanakan pembayaran Upah Kerja Lembur dengan sebutan lain dan nilai p
+  │     ✗ Perusahaan yang mempekerjakan Pekerja/Buruh selama Waktu Kerja Lembur berkewajiban membayar Upah Ker
+  │     ✗ Pengusaha wajib membayar Upah kepada Pekerja/Buruh yang tidak masuk bekerja dan/atau tidak melakukan
+  │   FN (missing from answer): 2
+  │     ○ Upah lembur harus lebih tinggi dari upah biasa.
+  │     ○ Ketentuan rumus teknis diatur di Keputusan Menteri.
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(8+2)) = 0.1667
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4120
+  │   Assessment: ✗ FAIL (0.4120) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4120
+  │
+  │ Row 13: [~ PARTIAL] Score=0.6639
+  │   Assessment: ~ PARTIAL (0.6639) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question: Kapan masa penawaran SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024
+  │   FP (wrong claims in answer): 1
+  │     ✗ [1][2][3].
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(1+0)) = 0.6667
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.6639
+  │   Assessment: ~ PARTIAL (0.6639) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.6639
+  │
+  │ Row 14: [✗ FAIL] Score=0.4490
+  │   Assessment: ✗ FAIL (0.4490) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Periode Early Bird 23 Agustus – 6 September 2024
+  │   FP (wrong claims in answer): 2
+  │     ✗ SR021 adalah dari
+  │     ✗ Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+0)) = 0.5000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4490
+  │   Assessment: ✗ FAIL (0.4490) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4490
+  │
+  │ Row 15: [~ PARTIAL] Score=0.7338
+  │   Assessment: ~ PARTIAL (0.7338) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 2
+  │     ✓ Minimum holding period untuk SR021 adalah sampai dengan penerimaan kupon pertama.
+  │     ✓ Investor baru diperbolehkan menjual setelah kupon pertama, mulai dari tanggal 11 November 2024.
+  │   FP (wrong claims in answer): 0
+  │   FN (missing from answer): 2
+  │     ○ Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pe
+  │     ○ Holding period sampai dengan 1 (satu) kali pembayaran kupon dengan pembayaran kupon ke-1 pada tangga
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 2/(2 + 0.5*(0+2)) = 0.6667
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.7338
+  │   Assessment: ~ PARTIAL (0.7338) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.7338
+  │
+  │ Row 16: [~ PARTIAL] Score=0.7029
+  │   Assessment: ~ PARTIAL (0.7029) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 4
+  │     ✓ SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia c
+  │     ✓ Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file berjudul “Step by St
+  │     ✓ Proses pendaftaran SID nasabah dilakukan melalui Cabang, input oleh CS melalui WMS dan approve oleh 
+  │     ✓ Proses pendaftaran SID nasabah dilakukan melalui PMobX/PNet
+  │   FP (wrong claims in answer): 7
+  │     ✗ Nasabah memiliki SID Obligasi dan Subreg PermataBank.
+  │     ✗ Profil risiko aktif.
+  │     ✗ Username & Password PNet/PmobX.
+  │     ✗ Data “Correspondence Addres” dan “Correspondence City” terisi.
+  │     ✗ Pendaftaran SID nasabah dapat dilakukan melalui Cabang, input oleh CS melalui WMS dan approve oleh B
+  │     ✗ Pemesanan dilakukan melalui PermataNet & PermataMobile X. Tidak tersedia kanal pemesanan lain selain
+  │     ✗ Pembayaran dilakukan dengan langsung mendebit rekening nasabah di PermataBank.
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 4/(4 + 0.5*(7+0)) = 0.5333
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.7029
+  │   Assessment: ~ PARTIAL (0.7029) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.7029
+  │
+  │ Row 17: [✗ FAIL] Score=0.4188
+  │   Assessment: ✗ FAIL (0.4188) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question: Kapan masa penawaran SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024
+  │   FP (wrong claims in answer): 1
+  │     ✗ Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(1+0)) = 0.6667
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4188
+  │   Assessment: ✗ FAIL (0.4188) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4188
+  │
+  │ Row 18: [~ PARTIAL] Score=0.5754
+  │   Assessment: ~ PARTIAL (0.5754) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Periode Early Bird 23 Agustus – 6 September 2024
+  │   FP (wrong claims in answer): 2
+  │     ✗ SR021 adalah dari
+  │     ✗ Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+0)) = 0.5000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.5754
+  │   Assessment: ~ PARTIAL (0.5754) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.5754
+  │
+  │ Row 19: [~ PARTIAL] Score=0.7958
+  │   Assessment: ~ PARTIAL (0.7958) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 2
+  │     ✓ Minimum holding period untuk SR021 adalah sampai penerimaan kupon pertama.
+  │     ✓ Investor baru diperbolehkan menjual setelah kupon pertama dibayarkan, yaitu mulai dari tanggal 11 No
+  │   FP (wrong claims in answer): 0
+  │   FN (missing from answer): 2
+  │     ○ Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pe
+  │     ○ Holding period sampai dengan 1 (satu) kali pembayaran kupon dengan pembayaran kupon ke-1 pada tangga
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 2/(2 + 0.5*(0+2)) = 0.6667
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.7958
+  │   Assessment: ~ PARTIAL (0.7958) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.7958
+  │
+  │ Row 20: [✗ FAIL] Score=0.3686
+  │   Assessment: ✗ FAIL (0.3686) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 2
+  │     ✓ SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) [2].
+  │     ✓ Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file berjudul “Step by St
+  │   FP (wrong claims in answer): 11
+  │     ✗ Pastikan Anda memiliki SID Obligasi dan Subreg PermataBank, profil risiko aktif, dan data "Correspon
+  │     ✗ Pembayaran pemesanan SR021 dilakukan dengan langsung mendebit rekening nasabah di PermataBank [3].
+  │     ✗ Terbuka hanya untuk WNI.
+  │     ✗ Telah memiliki SID Obligasi.
+  │     ✗ Telah memiliki rekening Surat Berharga di PermataBank.
+  │     ✗ Telah memiliki Profil Risiko terdaftar di WMS.
+  │     ✗ Telah memiliki akses PermataNet & PermataMobile X [4].
+  │     ✗ Minimum sebesar Rp. 1.000.000,- (satu juta rupiah) / nasabah dengan kelipatan Rp. 1.000.000,- (satu 
+  │     ✗ SR021T3: Maksimum sebesar Rp. 5.000.000.000,- / nasabah [4].
+  │     ✗ SR021T5: Maksimum sebesar Rp. 10.000.000.000,- / nasabah [4].
+  │   FN (missing from answer): 1
+  │     ○ Proses pendaftaran SID nasabah dilakukan melalui
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 2/(2 + 0.5*(11+1)) = 0.2500
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.3686
+  │   Assessment: ✗ FAIL (0.3686) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.3686
+  │
+  │ Row 21: [✗ FAIL] Score=0.4188
+  │   Assessment: ✗ FAIL (0.4188) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question: Kapan masa penawaran SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Masa Penawaran 23 Agustus – 18 September 2024
+  │   FP (wrong claims in answer): 2
+  │     ✗ Masa penawaran SR021
+  │     ✗ Beri tahu saya jika Anda ingin rincian lengkapnya
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+0)) = 0.5000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4188
+  │   Assessment: ✗ FAIL (0.4188) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4188
+  │
+  │ Row 22: [~ PARTIAL] Score=0.5754
+  │   Assessment: ~ PARTIAL (0.5754) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Periode Early Bird 23 Agustus – 6 September 2024
+  │   FP (wrong claims in answer): 2
+  │     ✗ SR021 adalah dari
+  │     ✗ Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+0)) = 0.5000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.5754
+  │   Assessment: ~ PARTIAL (0.5754) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.5754
+  │
+  │ Row 23: [~ PARTIAL] Score=0.6587
+  │   Assessment: ~ PARTIAL (0.6587) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 2
+  │     ✓ Minimum holding period untuk SR021 adalah sampai penerimaan kupon pertama.
+  │     ✓ Investor baru diperbolehkan menjual SR021 mulai dari 11 November 2024.
+  │   FP (wrong claims in answer): 0
+  │   FN (missing from answer): 2
+  │     ○ Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pe
+  │     ○ Holding period sampai dengan 1 (satu) kali pembayaran kupon dengan pembayaran kupon ke-1 pada tangga
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 2/(2 + 0.5*(0+2)) = 0.6667
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.6587
+  │   Assessment: ~ PARTIAL (0.6587) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.6587
+  │
+  │ Row 24: [✗ FAIL] Score=0.4141
+  │   Assessment: ✗ FAIL (0.4141) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 2
+  │     ✓ SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia c
+  │     ✓ Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file berjudul “Step by St
+  │   FP (wrong claims in answer): 6
+  │     ✗ Nasabah harus memiliki SID Obligasi dan Subreg PermataBank.
+  │     ✗ Profil risiko harus aktif.
+  │     ✗ Harus memiliki Username & Password PNet/PmobX.
+  │     ✗ Data “Correspondence Addres” dan “Correspondence City” harus terisi.
+  │     ✗ Minimum pemesanan adalah Rp. 1.000.000,- (satu juta rupiah) / nasabah dengan kelipatan Rp. 1.000.000
+  │     ✗ Maksimum pemesanan adalah Rp. 5.000.000.000,- / nasabah untuk tenor 3 tahun dan Rp. 10.000.000.000,-
+  │   FN (missing from answer): 3
+  │     ○ Proses pendaftaran SID nasabah dilakukan melalui
+  │     ○ Cabang, input oleh CS melalui WMS dan approve oleh BSM.
+  │     ○ Melalui PMobX/PNet
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 2/(2 + 0.5*(6+3)) = 0.3077
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4141
+  │   Assessment: ✗ FAIL (0.4141) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4141
+  │
+  │ Row 25: [✗ FAIL] Score=0.4188
+  │   Assessment: ✗ FAIL (0.4188) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question: Kapan masa penawaran SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Masa Penawaran 23 Agustus – 18 September 2024
+  │   FP (wrong claims in answer): 2
+  │     ✗ Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1].
+  │     ✗ Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+0)) = 0.5000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.4188
+  │   Assessment: ✗ FAIL (0.4188) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.4188
+  │
+  │ Row 26: [~ PARTIAL] Score=0.5004
+  │   Assessment: ~ PARTIAL (0.5004) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question: Kapan Periode Early Bird SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 1
+  │     ✓ Periode Early Bird 23 Agustus – 6 September 2024
+  │   FP (wrong claims in answer): 2
+  │     ✗ SR021 adalah dari
+  │     ✗ Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   FN (missing from answer): 0
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 1/(1 + 0.5*(2+0)) = 0.5000
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.5004
+  │   Assessment: ~ PARTIAL (0.5004) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.5004
+  │
+  │ Row 27: [~ PARTIAL] Score=0.7809
+  │   Assessment: ~ PARTIAL (0.7809) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   Question: Sebutkan minimun holding period SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 2
+  │     ✓ Minimum holding period SR021 adalah sampai dengan penerimaan kupon pertama, yang dibayarkan pada tan
+  │     ✓ Investor baru diperbolehkan menjual kepada pihak lain setelah kupon pertama, mulai dari tanggal 11 N
+  │   FP (wrong claims in answer): 0
+  │   FN (missing from answer): 2
+  │     ○ Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pe
+  │     ○ Holding period sampai dengan 1 (satu) kali pembayaran kupon dengan pembayaran kupon ke-1 pada tangga
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 2/(2 + 0.5*(0+2)) = 0.6667
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.7809
+  │   Assessment: ~ PARTIAL (0.7809) — Answer is partially correct. Review generate prompt structure and formatting rules
+  │   RAGAS Score: 0.7809
+  │
+  │ Row 28: [✗ FAIL] Score=0.3709
+  │   Assessment: ✗ FAIL (0.3709) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   [Comparing answer claims vs ground truth claims...]
+  │   TP (correct claims in answer): 2
+  │     ✓ SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia c
+  │     ✓ Pemesanan dilakukan melalui PermataNet & PermataMobile X. Tidak tersedia kanal pemesanan lain selain
+  │   FP (wrong claims in answer): 7
+  │     ✗ Terbuka hanya untuk WNI.
+  │     ✗ Telah memiliki SID Obligasi.
+  │     ✗ Telah memiliki rekening Surat Berharga di PermataBank.
+  │     ✗ Telah memiliki Profil Risiko terdaftar di WMS.
+  │     ✗ Telah memiliki akses PermataNet & PermataMobile X.
+  │     ✗ Minimum sebesar Rp. 1.000.000,- (satu juta rupiah) / nasabah dengan kelipatan Rp. 1.000.000,- (satu 
+  │     ✗ Maksimum sebesar Rp. 5.000.000.000,- / nasabah untuk tenor 3 tahun dan Rp. 10.000.000.000,- / nasaba
+  │   FN (missing from answer): 4
+  │     ○ Tata cara pemesanan melalui Digital Channel dapat diunduh dalam bentuk PDF file berjudul “Step by St
+  │     ○ Proses pendaftaran SID nasabah dilakukan melalui
+  │     ○ Cabang, input oleh CS melalui WMS dan approve oleh BSM.
+  │     ○ Melalui PMobX/PNet
+  │   Calculation: factual_similarity = TP/(TP + 0.5*(FP+FN)) = 2/(2 + 0.5*(7+4)) = 0.2667
+answer_correctness = 0.75*factual + 0.25*semantic ≈ 0.3709
+  │   Assessment: ✗ FAIL (0.3709) — Answer significantly differs from expected. Check pipeline end-to-end
+  │   RAGAS Score: 0.3709
+  │
+  │ Summary: 0 PASS, 12 PARTIAL, 16 FAIL (avg=0.5075)
+  └── End [answer_correctness] ──
+
+  [noise_sensitivity] running... OK (avg=0.0000)
+
+  ┌── [noise_sensitivity] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat dilakukan paling banyak **3 (tiga) jam dalam 1 (satu) hari** [1]. N
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 2: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berdasarkan ketentuan dalam UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari dan 14 (empa
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 3: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu ker
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 4: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam** dalam 1 (satu) hari [1]. Namun, PP No. 35 Tahu
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 5: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berikut adalah ketentuan maksimal kerja lembur per minggu sesuai dengan dokumen yang diberikan:
+
+- Menurut **UU No. 13 Tahun 2003 tentang Ketenagakerj
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 6: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pasal 27** [1] menyatakan bahwa pengusaha yang mempekerjaka
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 7: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan ketentuan dalam PP No. 35 Tahun 2021, kerja lembur hanya dapat dilakukan paling lama **4 (empat) jam dalam 1 (satu) hari** [1]. Ini merupa
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 8: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: Berikut adalah ketentuan maksimal jam kerja lembur per minggu sesuai dengan dokumen yang diberikan:
+
+- Menurut **UU No. 13 Tahun 2003 tentang Ketenaga
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 9: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pasal 21 ayat (2) PP No. 35 Tahun 2021** menetapkan bahwa p
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 10: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per hari?
+  │   Answer: Berdasarkan ketentuan yang ada dalam dokumen, jam maksimal kerja lembur per hari adalah:
+
+- **3 jam** menurut Pasal 78 UU No. 13 Tahun 2003 tentang Ke
+  │   Ground Truth: Maksimal 3 jam per hari (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 11: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Berapa jam maksimal kerja lembur per minggu?
+  │   Answer: - **14 jam** per minggu, sesuai dengan UU No. 13 Tahun 2003 tentang Ketenagakerjaan [1].
+- **18 jam** per minggu, sesuai dengan PP No. 35 Tahun 2021 t
+  │   Ground Truth: Maksimal 14 jam per minggu (UU 13/2003 Pasal 78 ayat 1b).
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 12: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question:  Apa ketentuan pembayaran upah lembur?
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu k
+  │   Ground Truth: Upah lembur harus lebih tinggi dari upah biasa, ketentuan rumus teknis diatur di Keputusan Menteri. (UU 13/2003 Pasal 78 ayat 3)
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 13: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Kapan masa penawaran SR021?
+  │   Answer: Masa penawaran SR021 adalah dari **23 Agustus 2024** hingga **18 September 2024** [1][2][3].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 14: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Answer: Periode Early Bird SR021 adalah dari **23 Agustus – 6 September 2024** [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Ground Truth: Periode Early Bird 23 Agustus – 6 September 2024
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 15: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Answer: Minimum holding period untuk SR021 adalah sampai dengan penerimaan kupon pertama. Investor baru diperbolehkan menjual setelah kupon pertama, mulai dar
+  │   Ground Truth: Minimum Holding Period
+1. Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pertama.
+2. Holding period
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 16: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Answer: Berikut adalah langkah-langkah untuk memesan SR021:
+
+1. **Pastikan persyaratan berikut terpenuhi:**
+   - Nasabah memiliki SID Obligasi dan Subreg Perm
+  │   Ground Truth: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia channel pemesanan lainnya
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 17: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Kapan masa penawaran SR021?
+  │   Answer: Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 18: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Answer: Periode Early Bird SR021 adalah dari 23 Agustus hingga 6 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Ground Truth: Periode Early Bird 23 Agustus – 6 September 2024
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 19: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Answer: Minimum holding period untuk SR021 adalah sampai penerimaan kupon pertama. Investor baru diperbolehkan menjual setelah kupon pertama dibayarkan, yaitu
+  │   Ground Truth: Minimum Holding Period
+1. Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pertama.
+2. Holding period
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 20: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Answer: Berikut adalah proses pemesanan SR021:
+
+1. **Sebelum Pemesanan**: Pastikan Anda memiliki SID Obligasi dan Subreg PermataBank, profil risiko aktif, dan
+  │   Ground Truth: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia channel pemesanan lainnya
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 21: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Kapan masa penawaran SR021?
+  │   Answer: Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 22: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Answer: Periode Early Bird SR021 adalah dari 23 Agustus hingga 6 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Ground Truth: Periode Early Bird 23 Agustus – 6 September 2024
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 23: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Answer: Minimum holding period untuk SR021 adalah sampai penerimaan kupon pertama. Setelah menerima kupon pertama pada 10 November 2024, investor baru diperbo
+  │   Ground Truth: Minimum Holding Period
+1. Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pertama.
+2. Holding period
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 24: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Answer: Berikut adalah proses pemesanan SR021:
+
+1. **Syarat Kelayakan**:
+   - Nasabah harus memiliki SID Obligasi dan Subreg PermataBank.
+   - Profil risiko h
+  │   Ground Truth: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia channel pemesanan lainnya
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 25: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Kapan masa penawaran SR021?
+  │   Answer: Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1]. 
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Ground Truth: Masa Penawaran 23 Agustus – 18 September 2024
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 26: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Kapan Periode Early Bird SR021?
+  │   Answer: Periode Early Bird SR021 adalah dari 23 Agustus hingga 6 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   Ground Truth: Periode Early Bird 23 Agustus – 6 September 2024
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 27: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Sebutkan minimun holding period SR021?
+  │   Answer: Minimum holding period SR021 adalah sampai dengan penerimaan kupon pertama, yang dibayarkan pada tanggal 10 November 2024. Investor baru diperbolehkan
+  │   Ground Truth: Minimum Holding Period
+1. Pembeli di pasar perdana tidak diperbolehkan menjual SR021 minimal sampai dengan penerimaan kupon pertama.
+2. Holding period
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 28: [✗ FAIL] Score=0.0000
+  │   Assessment: ✓ EXCELLENT (0.0000) — Model is robust against irrelevant context
+  │   Question: Bagaimana proses pemesanan SR021?
+  │   Answer: Berikut adalah proses pemesanan SR021:
+
+1. **Syarat Kelayakan**:
+   - Terbuka hanya untuk WNI.
+   - Telah memiliki SID Obligasi.
+   - Telah memiliki r
+  │   Ground Truth: Proses Pemesanan SR021
+1. SR021 hanya dapat dipesan melalui Digital Channel (PermataNet & PermataMobileX) dan tidak tersedia channel pemesanan lainnya
+  │   RAGAS Score: 0.0000
+  │
+  │ Summary: 0 PASS, 0 PARTIAL, 28 FAIL (avg=0.0000)
+  └── End [noise_sensitivity] ──
+
+  [summarization_score] running... OK (avg=0.0625)
+
+  ┌── [summarization_score] Detailed Trace & Verdicts ──
+  │
+  │ Row 1: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur hanya dapat dilakukan paling banyak **3 (tiga) jam dalam 1 (satu) hari** [1]. N
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 2: [~ PARTIAL] Score=0.5000
+  │   Assessment: ~ PARTIAL (0.5000) — Some key info from contexts is missed. Improve generation prompt
+  │   Question: N/A
+  │   Answer: Berdasarkan ketentuan dalam UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam dalam 1 (satu) hari dan 14 (empa
+  │   RAGAS Score: 0.5000
+  │
+  │ Row 3: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu ker
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 4: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan UU No. 13 Tahun 2003 tentang Ketenagakerjaan, kerja lembur maksimal adalah **3 (tiga) jam** dalam 1 (satu) hari [1]. Namun, PP No. 35 Tahu
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 5: [~ PARTIAL] Score=0.5000
+  │   Assessment: ~ PARTIAL (0.5000) — Some key info from contexts is missed. Improve generation prompt
+  │   Question: N/A
+  │   Answer: Berikut adalah ketentuan maksimal kerja lembur per minggu sesuai dengan dokumen yang diberikan:
+
+- Menurut **UU No. 13 Tahun 2003 tentang Ketenagakerj
+  │   RAGAS Score: 0.5000
+  │
+  │ Row 6: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pasal 27** [1] menyatakan bahwa pengusaha yang mempekerjaka
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 7: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan ketentuan dalam PP No. 35 Tahun 2021, kerja lembur hanya dapat dilakukan paling lama **4 (empat) jam dalam 1 (satu) hari** [1]. Ini merupa
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 8: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah ketentuan maksimal jam kerja lembur per minggu sesuai dengan dokumen yang diberikan:
+
+- Menurut **UU No. 13 Tahun 2003 tentang Ketenaga
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 9: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pasal 21 ayat (2) PP No. 35 Tahun 2021** menetapkan bahwa p
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 10: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berdasarkan ketentuan yang ada dalam dokumen, jam maksimal kerja lembur per hari adalah:
+
+- **3 jam** menurut Pasal 78 UU No. 13 Tahun 2003 tentang Ke
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 11: [~ PARTIAL] Score=0.5000
+  │   Assessment: ~ PARTIAL (0.5000) — Some key info from contexts is missed. Improve generation prompt
+  │   Question: N/A
+  │   Answer: - **14 jam** per minggu, sesuai dengan UU No. 13 Tahun 2003 tentang Ketenagakerjaan [1].
+- **18 jam** per minggu, sesuai dengan PP No. 35 Tahun 2021 t
+  │   RAGAS Score: 0.5000
+  │
+  │ Row 12: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah ketentuan pembayaran upah lembur sesuai dengan dokumen yang diberikan:
+
+- **Pengusaha yang mempekerjakan Pekerja/Buruh melebihi waktu k
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 13: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Masa penawaran SR021 adalah dari **23 Agustus 2024** hingga **18 September 2024** [1][2][3].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 14: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Periode Early Bird SR021 adalah dari **23 Agustus – 6 September 2024** [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 15: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Minimum holding period untuk SR021 adalah sampai dengan penerimaan kupon pertama. Investor baru diperbolehkan menjual setelah kupon pertama, mulai dar
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 16: [✗ FAIL] Score=0.2500
+  │   Assessment: ✗ FAIL (0.2500) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah langkah-langkah untuk memesan SR021:
+
+1. **Pastikan persyaratan berikut terpenuhi:**
+   - Nasabah memiliki SID Obligasi dan Subreg Perm
+  │   RAGAS Score: 0.2500
+  │
+  │ Row 17: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 18: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Periode Early Bird SR021 adalah dari 23 Agustus hingga 6 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 19: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Minimum holding period untuk SR021 adalah sampai penerimaan kupon pertama. Investor baru diperbolehkan menjual setelah kupon pertama dibayarkan, yaitu
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 20: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah proses pemesanan SR021:
+
+1. **Sebelum Pemesanan**: Pastikan Anda memiliki SID Obligasi dan Subreg PermataBank, profil risiko aktif, dan
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 21: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 22: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Periode Early Bird SR021 adalah dari 23 Agustus hingga 6 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 23: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Minimum holding period untuk SR021 adalah sampai penerimaan kupon pertama. Setelah menerima kupon pertama pada 10 November 2024, investor baru diperbo
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 24: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah proses pemesanan SR021:
+
+1. **Syarat Kelayakan**:
+   - Nasabah harus memiliki SID Obligasi dan Subreg PermataBank.
+   - Profil risiko h
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 25: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Masa penawaran SR021 adalah dari 23 Agustus 2024 hingga 18 September 2024 [1]. 
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 26: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Periode Early Bird SR021 adalah dari 23 Agustus hingga 6 September 2024 [1].
+
+Beri tahu saya jika Anda ingin rincian lengkapnya.
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 27: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Minimum holding period SR021 adalah sampai dengan penerimaan kupon pertama, yang dibayarkan pada tanggal 10 November 2024. Investor baru diperbolehkan
+  │   RAGAS Score: 0.0000
+  │
+  │ Row 28: [✗ FAIL] Score=0.0000
+  │   Assessment: ✗ FAIL (0.0000) — Answer poorly summarizes retrieved information. Review generate step
+  │   Question: N/A
+  │   Answer: Berikut adalah proses pemesanan SR021:
+
+1. **Syarat Kelayakan**:
+   - Terbuka hanya untuk WNI.
+   - Telah memiliki SID Obligasi.
+   - Telah memiliki r
+  │   RAGAS Score: 0.0000
+  │
+  │ Summary: 0 PASS, 3 PARTIAL, 25 FAIL (avg=0.0625)
+  └── End [summarization_score] ──
+
+
+  ┌─────────────────────────────┬────────┐
+  │ Metric                      │ Score  │
+  ├─────────────────────────────┼────────┤
+  │ faithfulness                │ 0.0071 │ ░░░░░░░░░░
+  │ answer_relevancy            │ 0.6032 │ ██████░░░░
+  │ context_precision           │ 0.0000 │ ░░░░░░░░░░
+  │ context_recall              │ 0.0000 │ ░░░░░░░░░░
+  │ answer_correctness          │ 0.5075 │ █████░░░░░
+  │ noise_sensitivity           │ 0.0000 │ ░░░░░░░░░░
+  │ summarization_score         │ 0.0625 │ ░░░░░░░░░░
+  └─────────────────────────────┴────────┘
+   Trace sheet: 196 trace entries written
+   Comparison History sheet: 196 entries written
+
+5. Results saved to: scripts\output\ragas_results.xlsx (sheets: Summary, Results, Formulas, Trace, Comparison History, Data Sources)
+   Total: 28 questions
+   Avg latency: 11.4s
+
+   People Care Agent (hr): 12 total evaluations, avg latency 7.2s
+     Faithfulness: 0.0000
+     Answer Relevancy: 0.6139
+     Context Precision: 0.0000
+     Context Recall: 0.0000
+     Answer Correctness: 0.4471
+     Noise Sensitivity: 0.0000
+     Summarization Score: 0.1250
+
+     Per-user breakdown:
+       hr_mgr_1@example.com (hr_manager): 3 questions, latency 8.5s
+         Faithfulness: 0.0000
+         Answer Relevancy: 0.6746
+         Context Precision: 0.0000
+         Context Recall: 0.0000
+         Answer Correctness: 0.4780
+         Noise Sensitivity: 0.0000
+         Summarization Score: 0.1667
+       hr_usr_1@example.com (hr_user): 3 questions, latency 7.2s
+         Faithfulness: 0.0000
+         Answer Relevancy: 0.6684
+         Context Precision: 0.0000
+         Context Recall: 0.0000
+         Answer Correctness: 0.4098
+         Noise Sensitivity: 0.0000
+         Summarization Score: 0.1667
+       hr_usr_2@example.com (hr_user): 3 questions, latency 6.7s
+         Faithfulness: 0.0000
+         Answer Relevancy: 0.4635
+         Context Precision: 0.0000
+         Context Recall: 0.0000
+         Answer Correctness: 0.4165
+         Noise Sensitivity: 0.0000
+         Summarization Score: 0.0000
+       hr_usr_3@example.com (hr_user): 3 questions, latency 6.3s
+         Faithfulness: 0.0000
+         Answer Relevancy: 0.6493
+         Context Precision: 0.0000
+         Context Recall: 0.0000
+         Answer Correctness: 0.4841
+         Noise Sensitivity: 0.0000
+         Summarization Score: 0.1667
+
+   Contact Center Agent (contact_center): 16 total evaluations, avg latency 14.5s
+     Faithfulness: 0.0125
+     Answer Relevancy: 0.5951
+     Context Precision: 0.0000
+     Context Recall: 0.0000
+     Answer Correctness: 0.5529
+     Noise Sensitivity: 0.0000
+     Summarization Score: 0.0156
+
+     Per-user breakdown:
+       cc_mgr_1@example.com (cc_manager): 4 questions, latency 11.4s
+         Faithfulness: 0.0000
+         Answer Relevancy: 0.6726
+         Context Precision: 0.0000
+         Context Recall: 0.0000
+         Answer Correctness: 0.6374
+         Noise Sensitivity: 0.0000
+         Summarization Score: 0.0625
+       cc_usr_1@example.com (cc_user): 4 questions, latency 12.4s
+         Faithfulness: 0.0000
+         Answer Relevancy: 0.6265
+         Context Precision: 0.0000
+         Context Recall: 0.0000
+         Answer Correctness: 0.5397
+         Noise Sensitivity: 0.0000
+         Summarization Score: 0.0000
+       cc_usr_2@example.com (cc_user): 4 questions, latency 17.4s
+         Faithfulness: 0.0000
+         Answer Relevancy: 0.4205
+         Context Precision: 0.0000
+         Context Recall: 0.0000
+         Answer Correctness: 0.5167
+         Noise Sensitivity: 0.0000
+         Summarization Score: 0.0000
+       cc_usr_3@example.com (cc_user): 4 questions, latency 16.8s
+         Faithfulness: 0.0500
+         Answer Relevancy: 0.6609
+         Context Precision: 0.0000
+         Context Recall: 0.0000
+         Answer Correctness: 0.5177
+         Noise Sensitivity: 0.0000
+         Summarization Score: 0.0000
