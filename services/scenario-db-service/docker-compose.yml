@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=scenario
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-scenario}
+      - POSTGRES_DB=scenario_db
+    volumes:
+      - scenario_db_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U scenario -d scenario_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_URL=postgresql+psycopg://scenario:${POSTGRES_PASSWORD:-scenario}@db:5432/scenario_db
+      - CORS_ORIGINS=${CORS_ORIGINS:-http://localhost:5173}
+      - AI_PLATFORM_URL=${AI_PLATFORM_URL:-http://k8s-aiplatfo-frontend-1732695a13-fe3650871f8fb59b.elb.ap-southeast-3.amazonaws.com}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION:-ap-southeast-3}
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Web UI for browsing the Postgres schema/data without writing SQL by hand.
+  # Log in at localhost:8080 with System=PostgreSQL, Server=db, and the credentials above.
+  adminer:
+    image: adminer:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  scenario_db_data:
